@@ -14,6 +14,7 @@
     <meta property="og:description" content="Premier law firm in Buenos Aires specializing in helping Russian nationals obtain Argentine citizenship.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://elicodes18.github.io/schein-law/index.html">
+    <!-- Hosted OG image served from GitHub Pages -->
     <meta property="og:image" content="https://elicodes18.github.io/schein-law/og-image.jpg">
 
     <!-- Tailwind CSS -->
@@ -169,6 +170,17 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Image fallback */
+        .img-placeholder {
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.875rem;
+            text-align: center;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -180,7 +192,8 @@
             <a href="#home" class="text-3xl font-serif text-gold font-bold" data-lang="logo">Schein Abogados</a>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-2xl">
+            <!-- A11Y IMPROVEMENT: Added aria-label and aria-expanded for screen readers -->
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl" aria-label="Toggle navigation menu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
 
@@ -230,7 +243,8 @@
     <main>
 
         <!-- 1. Home Section -->
-        <section id="home" class="relative h-screen min-h-[700px] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('BA_Skyline.jpg');">
+        <!-- Hero background now uses the local BA skyline photo -->
+<section id="home" class="relative h-screen min-h-[700px] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('BA_Skyline.jpg');">
             <!-- Overlay -->
             <div class="hero-overlay"></div>
             
@@ -261,6 +275,7 @@
                     </div>
                     <div class="trust-item">
                         <div class="text-gold text-4xl mb-3"><i class="fas fa-university"></i></div>
+                        <!-- This H3 is intentionally left to be filled by JS logic based on language -->
                         <h3 class="text-4xl font-serif text-navy font-bold counter-number" data-target="1"></h3>
                         <p class="text-lg text-gray-600" data-lang="trust_3">Professor at UBA</p>
                     </div>
@@ -310,7 +325,8 @@
                 <div id="testimonial-carousel" class="relative">
                     <!-- Slide 1 -->
                     <div class="testimonial-slide active">
-                        <img src="anna.png" alt="Photo of Anna K." class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold object-cover">
+                        <!-- Testimonial photo: Anna -->
+                        <img src="anna.png" alt="Photo of Anna K." class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                         <div class="text-yellow-500 mb-4">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
@@ -319,7 +335,8 @@
                     </div>
                     <!-- Slide 2 -->
                     <div class="testimonial-slide">
-                        <img src="dimitri.png" alt="Photo of Dimitri V." class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold object-cover">
+                        <!-- Testimonial photo: Dimitri -->
+                        <img src="dimitri.png" alt="Photo of Dimitri V." class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                          <div class="text-yellow-500 mb-4">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
@@ -328,7 +345,8 @@
                     </div>
                     <!-- Slide 3 -->
                     <div class="testimonial-slide">
-                        <img src="elena.png" alt="Photo of Elena P." class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold object-cover">
+                        <!-- Testimonial photo: Elena -->
+                        <img src="elena.png" alt="Photo of Elena P." class="w-24 h-24 rounded-full mx-auto mb-6 border-4 border-gold object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                          <div class="text-yellow-500 mb-4">
                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                         </div>
@@ -337,10 +355,11 @@
                     </div>
                     
                     <!-- Carousel Controls -->
-                    <button class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 text-2xl text-gray-400 hover:text-gold transition-colors p-4">
+                    <!-- A11Y IMPROVEMENT: Added aria-label for screen readers -->
+                    <button class="carousel-prev absolute left-0 top-1/2 -translate-y-1/2 text-2xl text-gray-400 hover:text-gold transition-colors p-4" aria-label="Previous testimonial">
                         <i class="fas fa-chevron-left"></i>
                     </button>
-                    <button class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-gray-400 hover:text-gold transition-colors p-4">
+                    <button class="carousel-next absolute right-0 top-1/2 -translate-y-1/2 text-2xl text-gray-400 hover:text-gold transition-colors p-4" aria-label="Next testimonial">
                         <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
@@ -353,8 +372,8 @@
                 <!-- About Hero -->
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
                     <div class="lg:w-1/2">
-                        <!-- Using the provided headshot -->
-                        <img src="Adriel_Schein.jpg" alt="Dr. Adriel David Schein, Founder & Lead Immigration Counsel" class="rounded-lg shadow-2xl w-full max-w-md mx-auto lg:max-w-none">
+                        <!-- Bio portrait uses the local Adriel_Schein.jpg asset -->
+                        <img src="Adriel_Schein.jpg" alt="Dr. Adriel David Schein, Founder & Lead Immigration Counsel" class="rounded-lg shadow-2xl w-full max-w-md mx-auto lg:max-w-none" onerror="this.src='og-image.jpg'; this.onerror=null;">
                     </div>
                     <div class="lg:w-1/2 text-center lg:text-left">
                         <h2 class="text-4xl md:text-5xl font-serif text-navy mb-6" data-lang="about_hero_title">Meet Dr. Adriel David Schein</h2>
@@ -418,7 +437,7 @@
                     <!-- Dr. Schein (Main) -->
                     <div class="md:col-span-1">
                         <div class="bg-white rounded-lg text-center p-6">
-                            <img src="Adriel_Schein.jpg" alt="Dr. Adriel David Schein" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gold">
+                            <img src="Adriel_Schein.jpg" alt="Dr. Adriel David Schein" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gold object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                             <h3 class="text-2xl font-serif text-navy">Dr. Adriel D. Schein</h3>
                             <p class="text-gold font-medium" data-lang="team_1_role">Founding Partner</p>
                         </div>
@@ -426,7 +445,7 @@
                     <!-- Associate 1 -->
                     <div class="md:col-span-1">
                         <div class="bg-white rounded-lg text-center p-6">
-                            <img src="junior.png" alt="Photo of Junior Associate" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 object-cover">
+                            <img src="junior.png" alt="Photo of Junior Associate" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                             <h3 class="text-2xl font-serif text-navy" data-lang="team_2_name">Associate Name</h3>
                             <p class="text-gray-500 font-medium" data-lang="team_2_role">Junior Associate</p>
                         </div>
@@ -434,7 +453,7 @@
                     <!-- Associate 2 -->
                     <div class="md:col-span-1">
                         <div class="bg-white rounded-lg text-center p-6">
-                            <img src="paralegal.png" alt="Photo of Russian-speaking paralegal" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 object-cover">
+                            <img src="paralegal.png" alt="Photo of Russian-speaking paralegal" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                             <h3 class="text-2xl font-serif text-navy" data-lang="team_3_name">Paralegal Name</h3>
                             <p class="text-gray-500 font-medium" data-lang="team_3_role">Russian-Speaking Paralegal</p>
                         </div>
@@ -470,7 +489,7 @@
                 <!-- Services Hero -->
                 <div class="text-center max-w-4xl mx-auto mb-16">
                     <div class="text-center mb-4">
-                        <img src="flagpassport.png" alt="Argentine passport and flag" class="w-48 h-32 mx-auto rounded-lg shadow-md mb-6 object-cover">
+                        <img src="flagpassport.png" alt="Argentine passport and flag" class="w-48 h-32 mx-auto rounded-lg shadow-md mb-6 object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                     </div>
                     <h2 class="text-4xl md:text-5xl font-serif text-navy mb-4" data-lang="services_hero_title">Immigration Services Tailored for Russians</h2>
                     <p class="text-xl text-gray-600" data-lang="services_hero_subtitle">Led by Dr. Adriel David Schein</p>
@@ -482,11 +501,12 @@
                         <div class="space-y-6">
                             <!-- Item 1 -->
                             <div class="accordion-item border border-gray-200 rounded-lg shadow-sm bg-white">
-                                <button class="accordion-header w-full flex justify-between items-center p-6 text-left">
+                                <!-- A11Y IMPROVEMENT: Added aria-expanded and aria-controls -->
+                                <button class="accordion-header w-full flex justify-between items-center p-6 text-left" aria-expanded="false" aria-controls="service-content-1">
                                     <h3 class="text-2xl font-serif text-navy" data-lang="service_1_title">Argentine Citizenship by Residency</h3>
                                     <i class="fas fa-chevron-down accordion-icon text-gold text-xl"></i>
                                 </button>
-                                <div class="accordion-content px-6 pb-6">
+                                <div id="service-content-1" class="accordion-content px-6 pb-6">
                                     <ul class="list-disc list-inside space-y-2 text-gray-600 mb-6">
                                         <li data-lang="service_1_b1">2-year path, no language exam required for most pathways.</li>
                                         <li data-lang="service_1_b2">Full support: from temporary visa to DNI to passport.</li>
@@ -497,11 +517,11 @@
                             </div>
                             <!-- Item 2 -->
                             <div class="accordion-item border border-gray-200 rounded-lg shadow-sm bg-white">
-                                <button class="accordion-header w-full flex justify-between items-center p-6 text-left">
+                                <button class="accordion-header w-full flex justify-between items-center p-6 text-left" aria-expanded="false" aria-controls="service-content-2">
                                     <h3 class="text-2xl font-serif text-navy" data-lang="service_2_title">Visa Applications & Renewals</h3>
                                     <i class="fas fa-chevron-down accordion-icon text-gold text-xl"></i>
                                 </button>
-                                <div class="accordion-content px-6 pb-6">
+                                <div id="service-content-2" class="accordion-content px-6 pb-6">
                                     <ul class="list-disc list-inside space-y-2 text-gray-600 mb-6">
                                         <li data-lang="service_2_b1">Expert handling of work, student, and investor visas.</li>
                                         <li data-lang="service_2_b2">Fast-track options and special considerations for Russian nationals.</li>
@@ -512,11 +532,11 @@
                             </div>
                             <!-- Item 3 -->
                             <div class="accordion-item border border-gray-200 rounded-lg shadow-sm bg-white">
-                                <button class="accordion-header w-full flex justify-between items-center p-6 text-left">
+                                <button class="accordion-header w-full flex justify-between items-center p-6 text-left" aria-expanded="false" aria-controls="service-content-3">
                                     <h3 class="text-2xl font-serif text-navy" data-lang="service_3_title">Document Translation & Apostille</h3>
                                     <i class="fas fa-chevron-down accordion-icon text-gold text-xl"></i>
                                 </button>
-                                <div class="accordion-content px-6 pb-6">
+                                <div id="service-content-3" class="accordion-content px-6 pb-6">
                                     <ul class="list-disc list-inside space-y-2 text-gray-600 mb-6">
                                         <li data-lang="service_3_b1">Certified (Traductor Público) Russian ↔ Spanish translations.</li>
                                         <li data-lang="service_3_b2">Hague Apostille processing for documents from Russia.</li>
@@ -527,11 +547,11 @@
                             </div>
                             <!-- Item 4 -->
                             <div class="accordion-item border border-gray-200 rounded-lg shadow-sm bg-white">
-                                <button class="accordion-header w-full flex justify-between items-center p-6 text-left">
+                                <button class="accordion-header w-full flex justify-between items-center p-6 text-left" aria-expanded="false" aria-controls="service-content-4">
                                     <h3 class="text-2xl font-serif text-navy" data-lang="service_4_title">Real Estate & Residency Proof</h3>
                                     <i class="fas fa-chevron-down accordion-icon text-gold text-xl"></i>
                                 </button>
-                                <div class="accordion-content px-6 pb-6">
+                                <div id="service-content-4" class="accordion-content px-6 pb-6">
                                     <ul class="list-disc list-inside space-y-2 text-gray-600 mb-6">
                                         <li data-lang="service_4_b1">Legal guidance on property purchase and lease agreements.</li>
                                         <li data-lang="service_4_b2">Assistance with bank account setup (Caja de Ahorro).</li>
@@ -579,32 +599,35 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
                     <!-- Article 1 -->
                     <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-2xl">
-                        <img src="https://placehold.co/600x400/001F3F/D4AF37?text=Guide" alt="2025 Citizenship Guide" class="w-full h-48 object-cover">
+                        <img src="og-image.jpg" alt="2025 Citizenship Guide" class="w-full h-48 object-cover" onerror="this.src='BA_Skyline.jpg'; this.onerror=null;">
                         <div class="p-6">
                             <p class="text-sm text-gold mb-2" data-lang="blog_1_author">By Dr. Adriel Schein</p>
                             <h3 class="text-xl font-serif text-navy mb-3" data-lang="blog_1_title">2025 Argentine Citizenship Guide for Russians</h3>
                             <p class="text-gray-600 text-sm mb-4" data-lang="blog_1_excerpt">A complete overview of the 2-year residency path, document requirements, and common pitfalls to avoid...</p>
-                            <a href="#" class="text-gold font-bold hover:underline" data-lang="read_more">Read More <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+                            <!-- A11Y IMPROVEMENT: Added descriptive aria-label -->
+                            <a href="#" class="text-gold font-bold hover:underline" data-lang="read_more" aria-label="Read more about 2025 Argentine Citizenship Guide for Russians">Read More <i class="fas fa-arrow-right text-sm ml-1"></i></a>
                         </div>
                     </div>
                     <!-- Article 2 -->
                     <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-2xl">
-                        <img src="https://placehold.co/600x400/001F3F/D4AF37?text=Welcome" alt="Why Argentina Welcomes Russian Expats" class="w-full h-48 object-cover">
+                        <img src="BA_Skyline.jpg" alt="Why Argentina Welcomes Russian Expats" class="w-full h-48 object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                         <div class="p-6">
                             <p class="text-sm text-gold mb-2" data-lang="blog_2_author">By Schein Abogados Team</p>
                             <h3 class="text-xl font-serif text-navy mb-3" data-lang="blog_2_title">Why Argentina Welcomes Russian Expats</h3>
                             <p class="text-gray-600 text-sm mb-4" data-lang="blog_2_excerpt">Exploring the cultural and legal framework that makes Argentina an ideal destination for Russian families...</p>
-                            <a href="#" class="text-gold font-bold hover:underline" data-lang="read_more">Read More <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+                            <!-- A11Y IMPROVEMENT: Added descriptive aria-label -->
+                            <a href="#" class="text-gold font-bold hover:underline" data-lang="read_more" aria-label="Read more about Why Argentina Welcomes Russian Expats">Read More <i class="fas fa-arrow-right text-sm ml-1"></i></a>
                         </div>
                     </div>
                     <!-- Article 3 -->
                     <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-2xl">
-                        <img src="https://placehold.co/600x400/001F3F/D4AF37?text=Mistakes" alt="Avoid These 5 Visa Mistakes" class="w-full h-48 object-cover">
+                        <img src="flagpassport.png" alt="Avoid These 5 Visa Mistakes" class="w-full h-48 object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
                         <div class="p-6">
                             <p class="text-sm text-gold mb-2" data-lang="blog_3_author">By Dr. Adriel Schein</p>
                             <h3 class="text-xl font-serif text-navy mb-3" data-lang="blog_3_title">Avoid These 5 Common Visa Mistakes</h3>
                             <p class="text-gray-600 text-sm mb-4" data-lang="blog_3_excerpt">From incorrect apostilles to missed deadlines, Dr. Schein details critical errors that can delay your application...</p>
-                            <a href="#" class="text-gold font-bold hover:underline" data-lang="read_more">Read More <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+                            <!-- A11Y IMPROVEMENT: Added descriptive aria-label -->
+                            <a href="#" class="text-gold font-bold hover:underline" data-lang="read_more" aria-label="Read more about Avoid These 5 Common Visa Mistakes">Read More <i class="fas fa-arrow-right text-sm ml-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -621,8 +644,14 @@
                             </ul>
                         </div>
                         <div class="md:w-1/2 w-full">
-                            <form id="resource-form" class="flex flex-col sm:flex-row gap-2">
-                                <input type="email" placeholder="your.email@example.com" required class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" data-lang-placeholder="email_placeholder">
+                            <!-- 
+                              FORM COMPLETION:
+                              1. Added method="POST" and an action URL.
+                              2. Replace "YOUR_UNIQUE_ID" with your own from Formspree.io or similar.
+                              3. Added name="email" to the input so the data is sent.
+                            -->
+                            <form id="resource-form" method="POST" action="https://formspree.io/f/mqagyndo" class="flex flex-col sm:flex-row gap-2">
+                                <input type="email" name="email" placeholder="your.email@example.com" required class="flex-grow p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" data-lang-placeholder="email_placeholder">
                                 <button type="submit" class="btn-gold" data-lang="download">Download</button>
                             </form>
                         </div>
@@ -643,25 +672,33 @@
                     <!-- Contact Form -->
                     <div class="lg:w-2/3 bg-light-gray p-8 md:p-12 rounded-lg shadow-xl">
                         <h3 class="text-3xl font-serif text-navy mb-8" data-lang="form_title">Send a Secure Message</h3>
-                        <form id="contact-form" class="space-y-6">
+                        <!-- 
+                          FORM COMPLETION:
+                          1. Added method="POST" and an action URL.
+                          2. Replace "YOUR_UNIQUE_ID" with your own from Formspree.io or similar.
+                          3. Added 'name' attributes to all fields.
+                          4. The JavaScript below is now configured to send this form via AJAX
+                             and still show your custom success modal.
+                        -->
+                        <form id="contact-form" method="POST" action="https://formspree.io/f/mqagyndo" class="space-y-6">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="name" class="block text-sm font-bold text-gray-700 mb-2" data-lang="form_name">Name</label>
-                                    <input type="text" id="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+                                    <input type="text" id="name" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
                                 </div>
                                 <div>
                                     <label for="email" class="block text-sm font-bold text-gray-700 mb-2" data-lang="form_email">Email</label>
-                                    <input type="email" id="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
+                                    <input type="email" id="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold">
                                 </div>
                             </div>
                              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label for="phone" class="block text-sm font-bold text-gray-700 mb-2" data-lang="form_phone">Phone</label>
-                                    <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" placeholder="+7 123 456 7890">
+                                    <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" placeholder="+7 123 456 7890">
                                 </div>
                                 <div>
                                     <label for="language" class="block text-sm font-bold text-gray-700 mb-2" data-lang="form_language">Preferred Language</label>
-                                    <select id="language" class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                    <select id="language" name="language" class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-gold">
                                         <option value="russian" data-lang="lang_ru">Russian</option>
                                         <option value="english" data-lang="lang_en">English</option>
                                         <option value="spanish" data-lang="lang_es">Spanish</option>
@@ -670,7 +707,7 @@
                             </div>
                             <div>
                                 <label for="service" class="block text-sm font-bold text-gray-700 mb-2" data-lang="form_service">Service Interest</label>
-                                <select id="service" class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-gold">
+                                <select id="service" name="service" class="w-full p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-gold">
                                     <option data-lang="service_op_1">Citizenship by Residency</option>
                                     <option data-lang="service_op_2">Visa Application</option>
                                     <option data-lang="service_op_3">Document Legalization</option>
@@ -680,7 +717,7 @@
                             </div>
                             <div>
                                 <label for="message" class="block text-sm font-bold text-gray-700 mb-2" data-lang="form_message">Message</label>
-                                <textarea id="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" required></textarea>
+                                <textarea id="message" name="message" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold" required></textarea>
                             </div>
                             <div>
                                 <!-- Placeholder for reCAPTCHA -->
@@ -688,6 +725,7 @@
                                 <button type="submit" class="btn-gold w-full text-lg" data-lang="form_submit">Send to Dr. Schein’s Team</button>
                             </div>
                         </form>
+                        <p id="contact-form-status" class="text-center text-red-500 mt-4"></p>
                     </div>
                     
                     <!-- Contact Info & Map -->
@@ -741,16 +779,18 @@
                 <!-- Calendly Embed -->
                 <div class="mt-20 md:mt-28 pt-20 border-t border-gray-200">
                      <h2 class="text-4xl md:text-5xl font-serif text-navy mb-12 text-center" data-lang="calendly_title">Book a 30-min Call with Dr. Schein</h2>
-                     <!-- Calendly inline widget placeholder -->
+                     <!-- 
+                        CALENDLY COMPLETION:
+                        1. Replace "YOUR_CALENDLY_URL" with your actual Calendly event link.
+                        2. The script to power this widget is now un-commented at the bottom of the file.
+                      -->
                     <div class="calendly-inline-widget rounded-lg shadow-xl overflow-hidden border border-gray-200" 
                          style="min-width:320px;height:700px;" 
-                         data-url="https://calendly.com/d/placeholder-user/30min">
+                        data-url="https://calendly.com/fhashiba/30min">
                          <div class="p-8 text-center bg-light-gray h-full flex items-center justify-center">
-                             <p class="text-gray-600" data-lang="calendly_placeholder">Calendly scheduling widget will load here.</p>
+                             <p class="text-gray-600" data-lang="calendly_placeholder">Loading scheduling widget...</p>
                          </div>
                     </div>
-                    <!-- Calendly script (to be added before </body> if this were live) -->
-                    <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
                 </div>
             </div>
         </section>
@@ -766,8 +806,8 @@
                     <a href="#home" class="text-3xl font-serif text-gold font-bold mb-4 inline-block" data-lang="logo">Schein Abogados</a>
                     <p class="text-gray-300 text-sm mb-4" data-lang="footer_address">Av. Corrientes 1234, Piso 8<br>CABA, Argentina</p>
                     <div class="flex space-x-4 text-gold text-2xl">
-                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="hover:text-white transition-colors"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Telegram Profile"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 
@@ -777,7 +817,7 @@
                     <ul class="space-y-2 text-sm text-gray-300">
                         <li><a href="#about" class="hover:text-gold" data-lang="nav_about">About Dr. Schein</a></li>
                         <li><a href="#services" class="hover:text-gold" data-lang="nav_services">Services</a></li>
-                        <li><a href="#blog" class="hover:text-gold" data-lang="faq_title">FAQ</a></li>
+                        <li><a href="#services" class="hover:text-gold" data-lang="faq_title">FAQ</a></li>
                         <li><a href="#contact" class="hover:text-gold" data-lang="nav_contact">Book Consultation</a></li>
                     </ul>
                 </div>
@@ -797,10 +837,17 @@
                 <div>
                     <h4 class="text-lg font-bold mb-4 uppercase tracking-wider" data-lang="footer_newsletter_title">Immigration Updates</h4>
                     <p class="text-sm text-gray-300 mb-4" data-lang="footer_newsletter_desc">Get updates for Russians in Argentina.</p>
-                    <form id="footer-newsletter-form" class="flex">
-                        <input type="email" placeholder="Email" class="p-2 rounded-l-lg border-0 text-gray-800 focus:outline-none w-full" data-lang-placeholder="email_placeholder_short">
-                        <button type="submit" class="bg-gold text-navy px-4 rounded-r-lg font-bold text-lg hover:bg-gold-dark">&rarr;</button>
+                    <!-- 
+                      FORM COMPLETION:
+                      1. Added method="POST" and an action URL.
+                      2. Replace "YOUR_UNIQUE_ID" with your own from Formspree.io or similar.
+                      3. Added name="email" to the input so the data is sent.
+                    -->
+                    <form id="footer-newsletter-form" method="POST" action="https://formspree.io/f/mqagyndo" class="flex">
+                        <input type="email" name="email" placeholder="Email" class="p-2 rounded-l-lg border-0 text-gray-800 focus:outline-none w-full" data-lang-placeholder="email_placeholder_short" required>
+                        <button type="submit" class="bg-gold text-navy px-4 rounded-r-lg font-bold text-lg hover:bg-gold-dark" aria-label="Subscribe to newsletter">&rarr;</button>
                     </form>
+                    <p id="footer-form-status" class="text-sm mt-2"></p>
                 </div>
             </div>
             
@@ -821,7 +868,7 @@
     <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-navy text-white p-6 shadow-2xl z-50 transform translate-y-full transition-transform duration-500 ease-out">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <p class="text-sm text-gray-300 mb-4 md:mb-0" data-lang="cookie_text">We use cookies to ensure you get the best experience on our website. By continuing, you agree to our <a href="#" class="text-gold underline">Privacy Policy</a>.</p>
-            <button id="cookie-accept" classs="btn-gold" data-lang="cookie_accept">Accept & Close</button>
+            <button id="cookie-accept" class="btn-gold" data-lang="cookie_accept">Accept & Close</button>
         </div>
     </div>
     
@@ -836,7 +883,12 @@
             <button id="close-modal" class="btn-gold" data-lang="modal_close">Close</button>
         </div>
     </div>
-
+    
+    <!-- 
+      CALENDLY COMPLETION:
+      This script is now un-commented and will load your Calendly widget.
+    -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
     <!-- JavaScript -->
     <script>
@@ -977,7 +1029,7 @@
                     info_telegram: "Telegram (Russian Support)",
                     map_title: "Our Office",
                     calendly_title: "Book a 30-min Call with Dr. Schein",
-                    calendly_placeholder: "Calendly scheduling widget will load here.",
+                    calendly_placeholder: "Loading scheduling widget...",
                     footer_address: "Av. Corrientes 1234, Piso 8\nCABA, Argentina",
                     footer_links: "Quick Links",
                     nav_about: "About Dr. Schein",
@@ -1124,7 +1176,7 @@
                     info_telegram: "Telegram (Поддержка на русском)",
                     map_title: "Наш офис",
                     calendly_title: "Записаться на 30-минутный звонок с Д-ром Шейном",
-                    calendly_placeholder: "Здесь будет загружен виджет Calendly.",
+                    calendly_placeholder: "Загружается виджет для записи...",
                     footer_address: "Av. Corrientes 1234, 8-й этаж\nCABA, Аргентина",
                     footer_links: "Быстрые ссылки",
                     nav_about: "О докторе Шейне",
@@ -1173,6 +1225,13 @@
                         btn.classList.remove('active');
                     }
                 });
+
+                // Re-run counter for UBA professor, as its text is language-dependent
+                document.querySelectorAll('.counter-number[data-target="1"]').forEach(counter => {
+                    if (counter.classList.contains('is-visible')) {
+                         counter.innerText = content[currentLang].trust_3;
+                    }
+                });
             }
             
             langButtons.forEach(button => {
@@ -1213,12 +1272,14 @@
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
+                const isExpanded = mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
             });
             // Close mobile menu on link click
             mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 });
             });
 
@@ -1227,14 +1288,19 @@
             accordionItems.forEach(item => {
                 const header = item.querySelector('.accordion-header');
                 header.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
                     // Close other items
                     accordionItems.forEach(otherItem => {
                         if (otherItem !== item && otherItem.classList.contains('active')) {
                             otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
                         }
                     });
+                    
                     // Toggle current item
                     item.classList.toggle('active');
+                    header.setAttribute('aria-expanded', !isActive);
                 });
             });
             
@@ -1250,20 +1316,22 @@
                 });
             }
             
-            nextBtn.addEventListener('click', () => {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            });
-            
-            prevBtn.addEventListener('click', () => {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                showSlide(currentSlide);
-            });
-            
-            // Auto-play carousel
-            setInterval(() => {
-                nextBtn.click();
-            }, 7000);
+            if (slides.length > 0) {
+                nextBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    showSlide(currentSlide);
+                });
+                
+                prevBtn.addEventListener('click', () => {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    showSlide(currentSlide);
+                });
+                
+                // Auto-play carousel
+                setInterval(() => {
+                    nextBtn.click();
+                }, 7000);
+            }
             
             // --- Trust Bar Counter Animation ---
             const counters = document.querySelectorAll('.counter-number');
@@ -1304,44 +1372,132 @@
             const cookieBanner = document.getElementById('cookie-banner');
             const cookieAccept = document.getElementById('cookie-accept');
             
-            setTimeout(() => {
-                cookieBanner.style.transform = 'translateY(0)';
-            }, 2000);
-            
-            cookieAccept.addEventListener('click', () => {
-                cookieBanner.style.transform = 'translateY(100%)';
-                localStorage.setItem('schein_abogados_cookie_accept', 'true');
-            });
-
-            if (localStorage.getItem('schein_abogados_cookie_accept')) {
-                cookieBanner.style.display = 'none';
+            if (cookieBanner && cookieAccept) {
+                if (!localStorage.getItem('schein_abogados_cookie_accept')) {
+                    setTimeout(() => {
+                        cookieBanner.style.transform = 'translateY(0)';
+                    }, 2000);
+                } else {
+                     cookieBanner.style.display = 'none';
+                }
+                
+                cookieAccept.addEventListener('click', () => {
+                    cookieBanner.style.transform = 'translateY(100%)';
+                    localStorage.setItem('schein_abogados_cookie_accept', 'true');
+                });
             }
             
-            // --- Form Submission & Modal ---
+            // --- Form Submission & Modal (AJAX Handler) ---
             const contactForm = document.getElementById('contact-form');
             const successModal = document.getElementById('success-modal');
             const closeModal = document.getElementById('close-modal');
+            const contactFormStatus = document.getElementById('contact-form-status');
             
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                // In a real app, you'd send data to a server here.
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const form = e.target;
+                    const data = new FormData(form);
+                    const action = form.action;
+                    const status = contactFormStatus;
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    const originalButtonText = submitButton.innerHTML;
+                    
+                    submitButton.innerHTML = "Sending...";
+                    submitButton.disabled = true;
+
+                    fetch(action, {
+                        method: 'POST',
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            // Show success modal
+                            successModal.classList.remove('invisible', 'opacity-0');
+                            successModal.querySelector('.modal-content').classList.remove('scale-95');
+                            form.reset();
+                            status.innerHTML = "";
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                                } else {
+                                    status.innerHTML = "Oops! There was a problem submitting your form.";
+                                }
+                            })
+                        }
+                    }).catch(error => {
+                        status.innerHTML = "Oops! There was a problem submitting your form.";
+                    }).finally(() => {
+                        submitButton.innerHTML = originalButtonText;
+                        submitButton.disabled = false;
+                    });
+                });
+            }
+            
+            if (closeModal) {
+                closeModal.addEventListener('click', () => {
+                    successModal.classList.add('invisible', 'opacity-0');
+                    successModal.querySelector('.modal-content').classList.add('scale-95');
+                });
                 
-                // Show modal
-                successModal.classList.remove('invisible', 'opacity-0');
-                successModal.querySelector('.modal-content').classList.remove('scale-95');
-            });
+                // Close modal on outside click
+                successModal.addEventListener('click', (e) => {
+                    if (e.target === successModal) {
+                        closeModal.click();
+                    }
+                });
+            }
+
+            // --- Generic AJAX handler for simple email forms (Resource & Footer) ---
+            function handleSimpleForm(formId, statusId) {
+                const form = document.getElementById(formId);
+                const status = document.getElementById(statusId);
+                
+                if (!form) return;
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const data = new FormData(form);
+                    const action = form.action;
+                    const submitButton = form.querySelector('button[type="submit"]');
+                    const originalButtonHTML = submitButton.innerHTML;
+
+                    submitButton.innerHTML = "...";
+                    submitButton.disabled = true;
+
+                    fetch(action, {
+                        method: 'POST',
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    }).then(response => {
+                        if (response.ok) {
+                            form.reset();
+                            status.innerHTML = "Success! Check your email.";
+                            status.className = "text-sm mt-2 text-green-300";
+                        } else {
+                            status.innerHTML = "Error. Please try again.";
+                            status.className = "text-sm mt-2 text-red-300";
+                        }
+                    }).catch(error => {
+                        status.innerHTML = "Error. Please try again.";
+                        status.className = "text-sm mt-2 text-red-300";
+                    }).finally(() => {
+                        submitButton.innerHTML = originalButtonHTML;
+                        submitButton.disabled = false;
+                        setTimeout(() => { status.innerHTML = ""; }, 3000);
+                    });
+                });
+            }
             
-            closeModal.addEventListener('click', () => {
-                successModal.classList.add('invisible', 'opacity-0');
-                successModal.querySelector('.modal-content').classList.add('scale-95');
-            });
-            
-             // Close modal on outside click
-            successModal.addEventListener('click', (e) => {
-                if (e.target === successModal) {
-                    closeModal.click();
-                }
-            });
+            handleSimpleForm('resource-form', 'contact-form-status'); // Re-using contact form status for simplicity, you might want a dedicated one.
+            handleSimpleForm('footer-newsletter-form', 'footer-form-status');
 
         });
     </script>
