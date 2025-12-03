@@ -237,7 +237,7 @@
     <header id="header" class="header-sticky fixed top-0 left-0 right-0 z-50 text-white transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Logo -->
-            <a href="#home" class="text-3xl font-serif text-gold font-bold" data-lang="logo">Schein Abogados</a>
+            <a href="#home" class="text-3xl font-serif text-gold font-bold" data-lang="logo">Schein &amp; Asoc. Abogados</a>
 
             <!-- Mobile Menu Button -->
             <!-- A11Y IMPROVEMENT: Added aria-label and aria-expanded for screen readers -->
@@ -261,6 +261,10 @@
                         <span class="fi fi-gb mr-1"></span> EN
                     </button>
                     <span class="text-gray-400">|</span>
+                    <button class="lang-btn text-sm font-semibold" data-lang-set="es">
+                        <span class="fi fi-ar mr-1"></span> ES
+                    </button>
+                    <span class="text-gray-400">|</span>
                     <button class="lang-btn text-sm font-semibold" data-lang-set="ru">
                         <span class="fi fi-ru mr-1"></span> RU
                     </button>
@@ -280,6 +284,9 @@
                 <button class="lang-btn text-sm font-semibold" data-lang-set="en">
                     <span class="fi fi-gb mr-1"></span> EN
                 </button>
+                <button class="lang-btn text-sm font-semibold" data-lang-set="es">
+                    <span class="fi fi-ar mr-1"></span> ES
+                </button>
                 <button class="lang-btn text-sm font-semibold" data-lang-set="ru">
                     <span class="fi fi-ru mr-1"></span> RU
                 </button>
@@ -298,8 +305,8 @@
             
             <!-- Content -->
             <div class="relative z-10 p-6">
-                <h1 class="text-6xl md:text-8xl font-serif text-gold font-bold mb-4" data-lang="hero_title">Schein Abogados</h1>
-                <p class="text-xl md:text-3xl font-light mb-8 max-w-3xl mx-auto" data-lang="hero_tagline">Guided by Dr. Adriel David Schein — Your Path to Argentine Citizenship</p>
+                <h1 class="text-6xl md:text-8xl font-serif text-gold font-bold mb-4" data-lang="hero_title">Ciudadanía argentina para familias rusas</h1>
+                <p class="text-xl md:text-3xl font-light mb-8 max-w-3xl mx-auto" data-lang="hero_tagline">Ayudamos a familias rusas y eslavas a conseguir su ciudadanía argentina. Abogado argentino nativo.</p>
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
                     <a href="#contact" class="btn-gold btn-prominent" data-lang="hero_cta_contact">Book Free Consultation</a>
                     <a href="#services" class="btn-outline-gold btn-hero-outline" data-lang="hero_cta_services">Explore Services</a>
@@ -314,18 +321,18 @@
                     <div class="trust-item">
                         <div class="text-gold text-4xl mb-3"><i class="fas fa-briefcase"></i></div>
                         <h3 class="text-4xl font-serif text-navy font-bold counter-number" data-target="15">0+</h3>
-                        <p class="text-lg text-gray-600" data-lang="trust_1">Years in Expat Law</p>
+                        <p class="text-lg text-gray-600" data-lang="trust_1">Más de 15 años de ejercicio profesional</p>
                     </div>
                     <div class="trust-item">
                         <div class="text-gold text-4xl mb-3"><i class="fas fa-users"></i></div>
                         <h3 class="text-4xl font-serif text-navy font-bold counter-number" data-target="200">0+</h3>
-                        <p class="text-lg text-gray-600" data-lang="trust_2">Russian Families Relocated</p>
+                        <p class="text-lg text-gray-600" data-lang="trust_2">Más de 200 casos de ciudadanía y residencia</p>
                     </div>
                     <div class="trust-item">
                         <div class="text-gold text-4xl mb-3"><i class="fas fa-university"></i></div>
                         <!-- This H3 is intentionally left to be filled by JS logic based on language -->
                         <h3 class="text-4xl font-serif text-navy font-bold counter-number" data-target="1"></h3>
-                        <p class="text-lg text-gray-600" data-lang="trust_3">Professor at UBA</p>
+                        <p class="text-lg text-gray-600" data-lang="trust_3">Profesor de Elementos de Derecho Constitucional (UBA)</p>
                     </div>
                 </div>
             </div>
@@ -424,9 +431,9 @@
                         <img src="Adriel_Schein.jpg" alt="Dr. Adriel David Schein, Founder & Lead Immigration Counsel" class="rounded-lg shadow-2xl w-full max-w-md mx-auto lg:max-w-none" onerror="this.src='og-image.jpg'; this.onerror=null;">
                     </div>
                     <div class="lg:w-1/2 text-center lg:text-left">
-                        <h2 class="text-4xl md:text-5xl font-serif text-navy mb-6" data-lang="about_hero_title">Meet Dr. Adriel David Schein</h2>
-                        <p class="text-2xl text-gold font-serif mb-8" data-lang="about_hero_subtitle">Founder & Lead Immigration Counsel</p>
-                        <p class="text-lg text-gray-600" data-lang="about_hero_desc">Dr. Schein combines academic rigor as a Professor of Law at the University of Buenos Aires with over 15 years of practical, discreet legal strategy. His firm is the premier choice for Russian nationals seeking a new life in Argentina.</p>
+                        <h2 class="text-4xl md:text-5xl font-serif text-navy mb-6" data-lang="about_hero_title">Conocé al Dr. Adriel David Schein</h2>
+                        <p class="text-2xl text-gold font-serif mb-8" data-lang="about_hero_subtitle">Abogado – Ciudadanía Argentina y Derecho Migratorio</p>
+                        <p class="text-lg text-gray-600" data-lang="about_hero_desc">El Dr. Schein se especializa en la obtención de Carta de ciudadanía argentina y derecho migratorio. Asesora a familias migrantes y personas individuales con un enfoque artesanal y acompañamiento constante.</p>
                     </div>
                 </div>
                 
@@ -436,39 +443,40 @@
                         <h3 class="text-3xl font-serif text-navy mb-8 text-center" data-lang="bio_title">Biography & Credentials</h3>
                         <div class="space-y-6 text-gray-700 leading-relaxed">
                             <p class="text-lg">
-                                <strong class="text-navy" data-lang="bio_item_1_strong">Professor of Immigration Law:</strong> <span data-lang="bio_item_1_text">University of Buenos Aires (UBA) since 2018.</span>
+                                <strong class="text-navy" data-lang="bio_item_1_strong">Ciudadanía y migraciones:</strong> <span data-lang="bio_item_1_text">Especialista en Carta de ciudadanía argentina y defensas ante la DNM.</span>
                             </p>
                             <p class="text-lg">
-                                <strong class="text-navy" data-lang="bio_item_2_strong">Specialized Expertise:</strong> <span data-lang="bio_item_2_text">Expert in Argentine citizenship and residency pathways for Russian nationals since 2015.</span>
+                                <strong class="text-navy" data-lang="bio_item_2_strong">Litigios constitucionales:</strong> <span data-lang="bio_item_2_text">Acciones e impugnaciones (incluido DNU 366/25) y casos penales selectos.</span>
                             </p>
                             <p class="text-lg">
-                                <strong class="text-navy" data-lang="bio_item_3_strong">Author:</strong> <span data-lang="bio_item_3_text">“Citizenship Without Borders: The Russian-Argentine Route” (2023).</span>
+                                <strong class="text-navy" data-lang="bio_item_3_strong">Docencia:</strong> <span data-lang="bio_item_3_text">Profesor de Elementos de Derecho Constitucional en la UBA; ponente en congresos.</span>
                             </p>
                             <p class="text-lg">
-                                <strong class="text-navy" data-lang="bio_item_4_strong">Track Record:</strong> <span data-lang="bio_item_4_text">With over 200 successful cases, Dr. Schein ensures every application meets the highest standard of academic precision.</span>
+                                <strong class="text-navy" data-lang="bio_item_4_strong">Enfoque:</strong> <span data-lang="bio_item_4_text">Atención personalizada, pocos casos a la vez y comunicación paso a paso.</span>
                             </p>
                             <hr class="my-6 border-gray-300">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <h4 class="text-xl font-serif text-navy mb-3" data-lang="bio_education_title">Education</h4>
                                     <ul class="list-disc list-inside space-y-1">
-                                        <li data-lang="bio_edu_1">PhD in Comparative Law (UBA)</li>
-                                        <li data-lang="bio_edu_2">LLM (Georgetown)</li>
-                                        <li data-lang="bio_edu_3">JD (UBA)</li>
+                                        <li data-lang="bio_edu_1">Abogado (UBA, 2012)</li>
+                                        <li data-lang="bio_edu_2">Especialista en Derecho Constitucional</li>
+                                        <li data-lang="bio_edu_3">Curso de Actualización en Litigación Penal</li>
+                                        <li data-lang="bio_edu_4">Posgrado en Derecho de los Migrantes (Sistema Interamericano)</li>
                                     </ul>
                                 </div>
                                 <div>
                                     <h4 class="text-xl font-serif text-navy mb-3" data-lang="bio_languages_title">Languages</h4>
                                     <ul class="list-disc list-inside space-y-1">
-                                        <li data-lang="bio_lang_1">Russian (Native-level)</li>
-                                        <li data-lang="bio_lang_2">Spanish (Native)</li>
-                                        <li data-lang="bio_lang_3">English (Fluent)</li>
+                                        <li data-lang="bio_lang_1">Español (nativo)</li>
+                                        <li data-lang="bio_lang_2">Inglés (fluido)</li>
+                                        <li data-lang="bio_lang_3">Ruso</li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="mt-6 pt-6 border-t border-gray-300 text-center">
                                 <p class="text-lg font-semibold text-gold" data-lang="bio_accolade">
-                                    <i class="fas fa-trophy mr-2"></i> Named “Top 40 Under 40 Immigration Lawyers” – Latin America Legal Review (2024)
+                                    <i class="fas fa-trophy mr-2"></i> Miembro de la Asociación Argentina de Derecho Constitucional. Habilitación federal; casos en CABA y Pcia. de Buenos Aires.
                                 </p>
                             </div>
                         </div>
@@ -856,7 +864,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <!-- Column 1: Logo & Address -->
                 <div>
-                    <a href="#home" class="text-3xl font-serif text-gold font-bold mb-4 inline-block" data-lang="logo">Schein Abogados</a>
+                    <a href="#home" class="text-3xl font-serif text-gold font-bold mb-4 inline-block" data-lang="logo">Schein &amp; Asoc. Abogados</a>
                     <p class="text-gray-300 text-sm mb-4" data-lang="footer_address">Av. Corrientes 1234, Piso 8<br>CABA, Argentina</p>
                     <div class="flex space-x-4 text-gold text-2xl">
                         <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
@@ -906,8 +914,14 @@
             
             <hr class="mt-12 mb-8 border-t border-gray-700">
             
-            <div class="text-center text-sm text-gray-400">
-                <p>&copy; 2025 Schein Abogados. All Rights Reserved.</p>
+            <div class="space-y-3 text-sm text-gray-300">
+                <p data-lang="footer_license">Dr. Adriel David SCHEIN — Matrícula T°116 F°647 C.P.A.C.F. | Matrícula Pcia. de Bs. As. TXIV F°472 C.A.M.</p>
+                <p data-lang="legal_notice">Aviso Legal: Este sitio y su contenido son informativos y no constituyen asesoramiento jurídico ni relación abogado-cliente. Consulte personalmente para su caso concreto. SCHEIN &amp; ASOC. ABOGADOS no asume responsabilidad por decisiones basadas en esta información.</p>
+                <p data-lang="legal_repro">Queda prohibida la reproducción total o parcial sin autorización expresa.</p>
+            </div>
+            
+            <div class="text-center text-sm text-gray-400 mt-6">
+                <p data-lang="footer_copyright">2025 SCHEIN &amp; ASOC. Todos los derechos reservados.</p>
                 <p class="mt-1">
                     <a href="#" class="hover:text-gold" data-lang="footer_privacy">Privacy Policy</a>
                     <span class="mx-2">|</span>
@@ -945,19 +959,19 @@
             // --- Language Content Store ---
             const content = {
                 en: {
-                    logo: "Schein Abogados",
+                    logo: "Schein & Asoc. Abogados",
                     nav_home: "Home",
                     nav_about: "About",
                     nav_services: "Services",
                     nav_blog: "Blog",
                     nav_contact: "Contact",
-                    hero_title: "Schein Abogados",
-                    hero_tagline: "Guided by Dr. Adriel David Schein — Your Path to Argentine Citizenship",
+                    hero_title: "Argentine Citizenship for Russian Families",
+                    hero_tagline: "We help Russian and Slavic families secure Argentine citizenship. Native Argentine counsel.",
                     hero_cta_contact: "Book Free Consultation",
                     hero_cta_services: "Explore Services",
-                    trust_1: "Years in Expat Law",
-                    trust_2: "Russian Families Relocated",
-                    trust_3: "Professor at UBA",
+                    trust_1: "15+ years of practice",
+                    trust_2: "200+ citizenship and residency cases",
+                    trust_3: "Professor of Constitutional Law (UBA)",
                     home_services_title: "A Bespoke Legal Strategy for Your New Life",
                     home_services_subtitle: "We provide a comprehensive, discreet, and academically-backed approach to your family's relocation and citizenship journey in Argentina.",
                     learn_more: "Learn More",
@@ -975,26 +989,27 @@
                     testimonial_3_quote: "\"The team's fluency in Russian was essential. They handled all our document translations and apostilles perfectly. Highly professional and trustworthy.\"",
                     testimonial_3_author: "- Elena P., Yekaterinburg",
                     about_hero_title: "Meet Dr. Adriel David Schein",
-                    about_hero_subtitle: "Founder & Lead Immigration Counsel",
-                    about_hero_desc: "Dr. Schein combines academic rigor as a Professor of Law at the University of Buenos Aires with over 15 years of practical, discreet legal strategy. His firm is the premier choice for Russian nationals seeking a new life in Argentina.",
+                    about_hero_subtitle: "Attorney – Argentine Citizenship & Immigration Law",
+                    about_hero_desc: "Dr. Schein focuses on Argentine citizenship actions and immigration law. He advises migrant families and individuals with an artisanal, step-by-step approach.",
                     bio_title: "Biography & Credentials",
-                    bio_item_1_strong: "Professor of Immigration Law:",
-                    bio_item_1_text: "University of Buenos Aires (UBA) since 2018.",
-                    bio_item_2_strong: "Specialized Expertise:",
-                    bio_item_2_text: "Expert in Argentine citizenship and residency pathways for Russian nationals since 2015.",
-                    bio_item_3_strong: "Author:",
-                    bio_item_3_text: "“Citizenship Without Borders: The Russian-Argentine Route” (2023).",
-                    bio_item_4_strong: "Track Record:",
-                    bio_item_4_text: "With over 200 successful cases, Dr. Schein ensures every application meets the highest standard of academic precision.",
+                    bio_item_1_strong: "Citizenship & immigration:",
+                    bio_item_1_text: "Specialist in Argentine citizenship actions and defenses before the DNM.",
+                    bio_item_2_strong: "Constitutional litigation:",
+                    bio_item_2_text: "Actions and challenges (including DNU 366/25) plus select criminal matters.",
+                    bio_item_3_strong: "Teaching:",
+                    bio_item_3_text: "Professor of Constitutional Law Elements at UBA; frequent conference speaker.",
+                    bio_item_4_strong: "Approach:",
+                    bio_item_4_text: "Personalized attention, few cases at a time, and step-by-step communication.",
                     bio_education_title: "Education",
-                    bio_edu_1: "PhD in Comparative Law (UBA)",
-                    bio_edu_2: "LLM (Georgetown)",
-                    bio_edu_3: "JD (UBA)",
+                    bio_edu_1: "Attorney, UBA (2012)",
+                    bio_edu_2: "Specialist in Constitutional Law",
+                    bio_edu_3: "Update Course in Criminal Litigation",
+                    bio_edu_4: "Postgraduate in Migrant Rights (Inter-American System)",
                     bio_languages_title: "Languages",
-                    bio_lang_1: "Russian (Native-level)",
-                    bio_lang_2: "Spanish (Native)",
-                    bio_lang_3: "English (Fluent)",
-                    bio_accolade: "Named “Top 40 Under 40 Immigration Lawyers” – Latin America Legal Review (2024)",
+                    bio_lang_1: "Spanish (native)",
+                    bio_lang_2: "English (fluent)",
+                    bio_lang_3: "Russian",
+                    bio_accolade: "Member, Argentine Association of Constitutional Law. Federal authorization; cases in CABA and Buenos Aires Province.",
                     team_title: "Our Dedicated Team",
                     team_subtitle: "While Dr. Schein personally oversees every case, he is supported by a specialized team of legal professionals.",
                     team_1_role: "Founding Partner",
@@ -1085,26 +1100,182 @@
                     footer_newsletter_desc: "Get updates for Russians in Argentina.",
                     footer_privacy: "Privacy Policy",
                     footer_terms: "Terms of Service",
+                    legal_notice: "Legal Notice: This site is informational only and does not create an attorney-client relationship. Consult directly for specific matters. SCHEIN & ASOC. ABOGADOS is not liable for decisions based on this content.",
+                    legal_repro: "Total or partial reproduction is prohibited without express authorization.",
+                    footer_license: "Dr. Adriel David SCHEIN — Matrícula T°116 F°647 C.P.A.C.F. | Matrícula Pcia. de Bs. As. TXIV F°472 C.A.M.",
+                    footer_copyright: "2025 SCHEIN & ASOC. Todos los derechos reservados.",
                     cookie_text: "We use cookies to ensure you get the best experience on our website. By continuing, you agree to our <a href='#' class='text-gold underline'>Privacy Policy</a>.",
                     cookie_accept: "Accept & Close",
                     modal_success_title: "Message Sent!",
                     modal_success_text: "Thank you for contacting us. Dr. Schein's team will review your message and respond within one business day.",
                     modal_close: "Close"
                 },
+                es: {
+                    logo: "Schein & Asoc. Abogados",
+                    nav_home: "Inicio",
+                    nav_about: "Sobre el Dr. Schein",
+                    nav_services: "Servicios",
+                    nav_blog: "Blog",
+                    nav_contact: "Contacto",
+                    hero_title: "Ciudadanía argentina para familias rusas",
+                    hero_tagline: "Ayudamos a familias rusas y eslavas a conseguir su ciudadanía argentina. Abogado argentino nativo.",
+                    hero_cta_contact: "Agenda una consulta gratis",
+                    hero_cta_services: "Ver servicios",
+                    trust_1: "Más de 15 años de ejercicio profesional",
+                    trust_2: "Más de 200 casos de ciudadanía y residencia",
+                    trust_3: "Profesor de Elementos de Derecho Constitucional (UBA)",
+                    home_services_title: "Estrategia legal a medida para tu nueva vida",
+                    home_services_subtitle: "Enfoque integral, confidencial y con respaldo académico para la relocalización y ciudadanía de tu familia en Argentina.",
+                    learn_more: "Ver más",
+                    home_service_1_title: "Ciudadanía por residencia",
+                    home_service_1_desc: "Acompañamiento completo: de la visa temporaria al pasaporte argentino, especializado en ciudadanos rusos.",
+                    home_service_2_title: "Visas y legalización de documentos",
+                    home_service_2_desc: "Gestión experta de visas de trabajo/estudio, apostillas y traducciones certificadas (RU-ES).",
+                    home_service_3_title: "Familia y bienes raíces",
+                    home_service_3_desc: "Asistencia para la mudanza familiar, compra o alquiler, cuentas bancarias y obtención del CUIL.",
+                    testimonials_title: "Familias que confían en nosotros",
+                    testimonial_1_quote: "\"El Dr. Schein y su equipo organizaron toda nuestra mudanza desde Moscú. Su conocimiento del derecho ruso y argentino es único. Nos sentimos seguros en cada paso.\"",
+                    testimonial_1_author: "- Anna K., San Petersburgo",
+                    testimonial_2_quote: "\"Como profesor, el Dr. Schein explicó todo con claridad. Llevó personalmente nuestro trámite y recibimos los DNI antes de lo esperado.\"",
+                    testimonial_2_author: "- Dimitri V., Moscú",
+                    testimonial_3_quote: "\"El manejo nativo del ruso fue clave. Hicieron todas las traducciones y apostillas impecablemente. Súper profesionales y confiables.\"",
+                    testimonial_3_author: "- Elena P., Ekaterimburgo",
+                    about_hero_title: "Conocé al Dr. Adriel David Schein",
+                    about_hero_subtitle: "Abogado – Ciudadanía Argentina y Derecho Migratorio",
+                    about_hero_desc: "El Dr. Schein se especializa en la obtención de Carta de ciudadanía argentina y derecho migratorio. Asesora a familias migrantes y personas individuales con un enfoque artesanal y acompañamiento constante.",
+                    bio_title: "Biografía y credenciales",
+                    bio_item_1_strong: "Ciudadanía y migraciones:",
+                    bio_item_1_text: "Especialista en Carta de ciudadanía argentina y defensas ante la DNM.",
+                    bio_item_2_strong: "Litigios constitucionales:",
+                    bio_item_2_text: "Acciones e impugnaciones (incluido DNU 366/25) y casos penales selectos.",
+                    bio_item_3_strong: "Docencia:",
+                    bio_item_3_text: "Profesor de Elementos de Derecho Constitucional en la UBA; ponente en congresos.",
+                    bio_item_4_strong: "Enfoque:",
+                    bio_item_4_text: "Atención personalizada, pocos casos a la vez y comunicación paso a paso.",
+                    bio_education_title: "Formación",
+                    bio_edu_1: "Abogado (UBA, 2012)",
+                    bio_edu_2: "Especialista en Derecho Constitucional",
+                    bio_edu_3: "Curso de Actualización en Litigación Penal",
+                    bio_edu_4: "Posgrado en Derecho de los Migrantes (Sistema Interamericano)",
+                    bio_languages_title: "Idiomas",
+                    bio_lang_1: "Español (nativo)",
+                    bio_lang_2: "Inglés (fluido)",
+                    bio_lang_3: "Ruso",
+                    bio_accolade: "Miembro de la Asociación Argentina de Derecho Constitucional. Habilitación federal; casos en CABA y Pcia. de Buenos Aires.",
+                    team_title: "Nuestro equipo dedicado",
+                    team_subtitle: "El Dr. Schein supervisa cada caso, apoyado por un equipo especializado de profesionales.",
+                    team_1_role: "Socio fundador",
+                    team_2_name: "Nombre del asociado",
+                    team_2_role: "Abogado junior",
+                    team_3_name: "Nombre del paralegal",
+                    team_3_role: "Paralegal hispanorruso",
+                    mission_1_title: "Fluidez cultural",
+                    mission_1_desc: "Comunicación en ruso y español con nivel nativo para asegurar claridad total.",
+                    mission_2_title: "Precisión académica",
+                    mission_2_desc: "Cada trámite se prepara con la rigurosidad de un profesor de la UBA.",
+                    mission_3_title: "Servicio boutique",
+                    mission_3_desc: "Un cliente, un equipo dedicado. No trabajamos en volumen.",
+                    services_hero_title: "Servicios migratorios para ciudadanos rusos",
+                    services_hero_subtitle: "Liderados por el Dr. Adriel David Schein",
+                    service_1_title: "Ciudadanía argentina por residencia",
+                    service_1_b1: "Ruta de 2 años; sin examen de idioma en la mayoría de los casos.",
+                    service_1_b2: "Acompañamiento completo: de la visa temporaria al DNI y pasaporte.",
+                    service_1_b3: "Plazos típicos: 6–12 meses para la ciudadanía definitiva.",
+                    book_with_dr_schein: "Agendar con el Dr. Schein",
+                    service_2_title: "Solicitudes y renovaciones de visa",
+                    service_2_b1: "Gestión experta de visas de trabajo, estudio e inversor.",
+                    service_2_b2: "Opciones rápidas y consideraciones especiales para ciudadanos rusos.",
+                    service_2_b3: "Renovaciones y cambios de estatus sin fricciones.",
+                    service_3_title: "Traducción y apostilla de documentos",
+                    service_3_b1: "Traducciones certificadas (Traductor Público) ruso ↔ español.",
+                    service_3_b2: "Tramitación de apostilla de La Haya para documentos de Rusia.",
+                    service_3_b3: "Legalización completa de partidas de nacimiento/matrimonio y títulos universitarios.",
+                    service_4_title: "Bienes raíces y prueba de residencia",
+                    service_4_b1: "Asesoría legal en compra o alquiler de inmuebles.",
+                    service_4_b2: "Asistencia para abrir cuenta bancaria (Caja de Ahorro).",
+                    service_4_b3: "Gestión de CUIL/CUIT y certificado de domicilio.",
+                    faq_title: "Respuestas rápidas",
+                    faq_1_q: "¿Los rusos deben hablar español para obtener la ciudadanía?",
+                    faq_1_a: "No. El proceso de ciudadanía por residencia en Argentina no exige examen obligatorio de idioma o historia, lo que es una gran ventaja.",
+                    faq_2_q: "¿Puedo traer a mi familia?",
+                    faq_2_a: "Sí. Nos especializamos en relocalización familiar. Cónyuges e hijos suelen aplicar junto al titular.",
+                    faq_3_q: "¿Cuál es la vía más rápida hacia la ciudadanía?",
+                    faq_3_a: "La vía estándar son 2 años de residencia continua. El Dr. Schein presenta tu caso correctamente para evitar demoras.",
+                    blog_title: "Ideas del Dr. Schein y equipo",
+                    blog_subtitle: "Novedades migratorias y análisis legal para rusos en Argentina.",
+                    blog_1_author: "Por el Dr. Adriel Schein",
+                    blog_1_title: "Guía 2025 de ciudadanía argentina para rusos",
+                    blog_1_excerpt: "Resumen del camino de 2 años de residencia, requisitos de documentos y errores comunes a evitar...",
+                    read_more: "Leer más",
+                    blog_2_author: "Por el equipo de Schein Abogados",
+                    blog_2_title: "Por qué Argentina recibe a los expatriados rusos",
+                    blog_2_excerpt: "Un repaso cultural y legal que hace de Argentina un destino ideal para familias rusas...",
+                    blog_3_author: "Por el Dr. Adriel Schein",
+                    blog_3_title: "Evitá estos 5 errores frecuentes de visa",
+                    blog_3_excerpt: "Desde apostillas incorrectas hasta plazos vencidos, el Dr. Schein detalla errores críticos que retrasan tu trámite...",
+                    resources_title: "Recursos migratorios gratuitos",
+                    resources_desc: "Descargá nuestros checklists (RU/EN) preparados por el Dr. Schein para iniciar tu camino.",
+                    resource_1: "[PDF] Checklist para solicitud de ciudadanía",
+                    resource_2: "[PDF] Lista de documentos y apostillas requeridas",
+                    download: "Descargar",
+                    email_placeholder: "tu.email@ejemplo.com",
+                    email_placeholder_short: "Email",
+                    contact_title: "Agenda tu consulta",
+                    contact_subtitle: "Da el primer paso hacia tu nueva vida en Argentina. Contactá al equipo del Dr. Schein para una evaluación gratuita y confidencial.",
+                    form_title: "Enviá un mensaje seguro",
+                    form_name: "Nombre",
+                    form_email: "Email",
+                    form_phone: "Teléfono",
+                    form_language: "Idioma preferido",
+                    lang_ru: "Ruso",
+                    lang_en: "Inglés",
+                    lang_es: "Español (Argentina)",
+                    form_service: "Servicio de interés",
+                    service_op_1: "Ciudadanía por residencia",
+                    service_op_2: "Solicitud de visa",
+                    service_op_3: "Legalización de documentos",
+                    service_op_4: "Bienes raíces y familia",
+                    service_op_5: "Otro",
+                    form_message: "Mensaje",
+                    recaptcha: "Este sitio está protegido por reCAPTCHA; aplican la Política de Privacidad y los Términos de Servicio de Google.",
+                    form_submit: "Enviar al equipo del Dr. Schein",
+                    info_title: "Información de contacto",
+                    info_whatsapp: "WhatsApp (Atención en ruso)",
+                    info_telegram: "Telegram (Atención en ruso)",
+                    map_title: "Nuestra oficina",
+                    calendly_title: "Agendá una llamada de 30 min con el Dr. Schein",
+                    calendly_placeholder: "Cargando el widget de turnos...",
+                    footer_address: "Av. Corrientes 1234, Piso 8\nCABA, Argentina",
+                    footer_links: "Enlaces rápidos",
+                    nav_about: "Sobre el Dr. Schein",
+                    footer_newsletter_title: "Novedades migratorias",
+                    footer_newsletter_desc: "Recibí actualizaciones para rusos en Argentina.",
+                    footer_privacy: "Política de privacidad",
+                    footer_terms: "Términos del servicio",
+                    legal_notice: "Aviso Legal: Este sitio y su contenido son informativos y no constituyen asesoramiento jurídico ni relación abogado-cliente. Consulte personalmente para su caso concreto. SCHEIN & ASOC. ABOGADOS no asume responsabilidad por decisiones basadas en esta información.",
+                    legal_repro: "Queda prohibida la reproducción total o parcial sin autorización expresa.",
+                    footer_license: "Dr. Adriel David SCHEIN — Matrícula T°116 F°647 C.P.A.C.F. | Matrícula Pcia. de Bs. As. TXIV F°472 C.A.M.",
+                    footer_copyright: "2025 SCHEIN & ASOC. Todos los derechos reservados.",
+                    cookie_text: "Usamos cookies para garantizar la mejor experiencia. Al continuar, aceptás nuestra <a href='#' class='text-gold underline'>Política de privacidad</a>.",
+                    cookie_accept: "Aceptar y cerrar",
+                    modal_success_title: "¡Mensaje enviado!",
+                    modal_success_text: "Gracias por contactarnos. El equipo del Dr. Schein revisará tu mensaje y responderá dentro de un día hábil.",
+                    modal_close: "Cerrar"
+                },
                 ru: {
-                    logo: "Schein Abogados",
+                    logo: "Schein & Asoc. Abogados",
                     nav_home: "Главная",
                     nav_about: "О нас",
                     nav_services: "Услуги",
                     nav_blog: "Блог",
                     nav_contact: "Контакты",
-                    hero_title: "Schein Abogados",
-                    hero_tagline: "Под руководством доктора Адриэля Давида Шейна — Ваш путь к аргентинскому гражданству",
+                    hero_title: "Аргентинское гражданство для российских семей",
+                    hero_tagline: "Мы помогаем российским и славянским семьям получить аргентинское гражданство. Аргентинский адвокат.",
                     hero_cta_contact: "Бесплатная консультация",
                     hero_cta_services: "Наши услуги",
-                    trust_1: "Лет в иммиграционном праве",
-                    trust_2: "Российских семей переехало",
-                    trust_3: "Профессор в УБА (UBA)",
+                    trust_1: "15+ лет юридической практики",
+                    trust_2: "200+ дел по гражданству и резиденции",
+                    trust_3: "Профессор «Элементы конституционного права» (UBA)",
                     home_services_title: "Индивидуальная правовая стратегия для вашей новой жизни",
                     home_services_subtitle: "Мы предоставляем комплексный, конфиденциальный и академически обоснованный подход к переезду вашей семьи и получению гражданства в Аргентине.",
                     learn_more: "Узнать больше",
@@ -1121,27 +1292,28 @@
                     testimonial_2_author: "- Дмитрий В., Москва",
                     testimonial_3_quote: "\"Свободное владение русским языком со стороны команды было крайне важно. Они идеально выполнили все переводы и апостилирование документов. Высокопрофессионально и надежно.\"",
                     testimonial_3_author: "- Елена П., Екатеринбург",
-                    about_hero_title: "Знакомьтесь, Доктор Адриэль Давид Шейн",
-                    about_hero_subtitle: "Основатель и ведущий иммиграционный юрисконсульт",
-                    about_hero_desc: "Доктор Шейн сочетает академическую строгость профессора права Университета Буэнос-Айреса (UBA) с более чем 15-летним опытом практической, конфиденциальной юридической стратегии. Его фирма — лучший выбор для граждан России, ищущих новую жизнь в Аргентине.",
-                    bio_title: "Биография и Квалификация",
-                    bio_item_1_strong: "Профессор иммиграционного права:",
-                    bio_item_1_text: "Университет Буэнос-Айреса (UBA) с 2018 года.",
-                    bio_item_2_strong: "Специализация:",
-                    bio_item_2_text: "Эксперт по путям получения аргентинского гражданства и вида на жительство для граждан России с 2015 года.",
-                    bio_item_3_strong: "Автор:",
-                    bio_item_3_text: "«Гражданство без границ: Российско-аргентинский путь» (2023 г.).",
-                    bio_item_4_strong: "Опыт:",
-                    bio_item_4_text: "Имея более 200 успешных дел, доктор Шейн гарантирует, что каждая заявка соответствует высочайшим стандартам академической точности.",
+                    about_hero_title: "Знакомьтесь, доктор Адриэль Давид Шейн",
+                    about_hero_subtitle: "Адвокат – гражданство Аргентины и миграционное право",
+                    about_hero_desc: "Доктор Шейн специализируется на делах о получении аргентинского гражданства и миграционном праве. Консультирует семьи и частных клиентов с индивидуальным, пошаговым подходом.",
+                    bio_title: "Биография и квалификация",
+                    bio_item_1_strong: "Гражданство и миграция:",
+                    bio_item_1_text: "Специалист по искам о гражданстве и защитам в DNM.",
+                    bio_item_2_strong: "Конституционные споры:",
+                    bio_item_2_text: "Иски и оспаривание актов (вкл. DNU 366/25) и выборочные уголовные дела.",
+                    bio_item_3_strong: "Преподавание:",
+                    bio_item_3_text: "Профессор курса «Элементы конституционного права» в UBA; спикер на конференциях.",
+                    bio_item_4_strong: "Подход:",
+                    bio_item_4_text: "Персональное ведение, ограниченное число дел и прозрачное сопровождение клиента.",
                     bio_education_title: "Образование",
-                    bio_edu_1: "PhD по сравнительному праву (UBA)",
-                    bio_edu_2: "LLM (Джорджтаун)",
-                    bio_edu_3: "JD (UBA)",
+                    bio_edu_1: "Адвокат, UBA (2012)",
+                    bio_edu_2: "Специалист по конституционному праву",
+                    bio_edu_3: "Курс по уголовному процессу",
+                    bio_edu_4: "Постград по правам мигрантов (Межамериканская система)",
                     bio_languages_title: "Языки",
-                    bio_lang_1: "Русский (уровень носителя)",
-                    bio_lang_2: "Испанский (родной)",
-                    bio_lang_3: "Английский (свободно)",
-                    bio_accolade: "Включен в список «Top 40 Under 40 Immigration Lawyers» – Latin America Legal Review (2024)",
+                    bio_lang_1: "Испанский (родной)",
+                    bio_lang_2: "Английский (свободно)",
+                    bio_lang_3: "Русский",
+                    bio_accolade: "Член Аргентинской ассоциации конституционного права. Федеральная аккредитация; дела в CABA и пров. Буэнос-Айрес.",
                     team_title: "Наша преданная команда",
                     team_subtitle: "Доктор Шейн лично контролирует каждое дело, его поддерживает специализированная команда юристов.",
                     team_1_role: "Партнер-основатель",
@@ -1232,6 +1404,10 @@
                     footer_newsletter_desc: "Получайте новости для россиян в Аргентине.",
                     footer_privacy: "Политика конфиденциальности",
                     footer_terms: "Условия использования",
+                    legal_notice: "Правовое уведомление: сайт носит информационный характер и не создает отношений адвокат-клиент. Для конкретных вопросов обращайтесь лично. SCHEIN & ASOC. ABOGADOS не несет ответственности за решения, принятые на основе этой информации.",
+                    legal_repro: "Полное или частичное воспроизведение запрещено без письменного разрешения.",
+                    footer_license: "Д-р Адриэль Д. Шейн — Matrícula T°116 F°647 C.P.A.C.F. | Matrícula Pcia. de Bs. As. TXIV F°472 C.A.M.",
+                    footer_copyright: "2025 SCHEIN & ASOC. Todos los derechos reservados.",
                     cookie_text: "Мы используем файлы cookie, чтобы обеспечить вам лучший опыт на нашем веб-сайте. Продолжая, вы соглашаетесь с нашей <a href='#' class='text-gold underline'>Политикой конфиденциальности</a>.",
                     cookie_accept: "Принять и закрыть",
                     modal_success_title: "Сообщение отправлено!",
@@ -1298,6 +1474,8 @@
                 setLanguage(savedLang);
             } else if (browserLang === 'ru') {
                 setLanguage('ru');
+            } else if (browserLang === 'es') {
+                setLanguage('es');
             } else {
                 setLanguage('en');
             }
