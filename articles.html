@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schein Abogados | Articles & Insights</title>
+    <meta name="description" content="In-depth articles from Dr. Adriel Schein and team on Argentine immigration and citizenship for Russian families.">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --navy: #001F3F;
+            --gold: #D4AF37;
+            --light-gray: #F8F9FA;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .bg-navy { background-color: var(--navy); }
+        .bg-gold { background-color: var(--gold); }
+        .bg-light-gray { background-color: var(--light-gray); }
+        .text-navy { color: var(--navy); }
+        .text-gold { color: var(--gold); }
+        .hover\:bg-gold-dark:hover { background-color: #c09e31; }
+
+        .header-sticky {
+            transition: all 0.3s ease-in-out;
+        }
+        .header-scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid #eee;
+        }
+
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 31, 63, 0.6);
+            z-index: 1;
+        }
+
+        .btn-gold {
+            @apply inline-block bg-gold text-navy font-bold py-3 px-8 rounded-lg text-sm uppercase tracking-wider transition duration-300 ease-in-out;
+        }
+        .btn-gold:hover {
+            @apply bg-gold-dark shadow-lg transform -translate-y-px;
+            background-color: #c09e31;
+        }
+
+        .lang-toggle .lang-btn {
+            @apply px-2 py-1 rounded-md transition-colors duration-200;
+        }
+        .lang-toggle .lang-btn.active {
+            @apply bg-navy text-white;
+        }
+        .lang-toggle .lang-btn:not(.active) {
+            @apply text-gray-500 hover:text-navy;
+        }
+        .header-sticky:not(.header-scrolled) .lang-toggle .lang-btn.active {
+             @apply bg-white text-navy;
+        }
+         .header-sticky:not(.header-scrolled) .lang-toggle .lang-btn:not(.active) {
+             @apply text-gray-300 hover:text-white;
+        }
+
+        .footer-bg {
+            background-color: var(--navy);
+            background-image:
+                repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.01) 0, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 20px),
+                repeating-linear-gradient(-45deg, rgba(212, 175, 55, 0.01) 0, rgba(212, 175, 55, 0.01) 1px, transparent 1px, transparent 20px);
+            background-size: 40px 40px;
+        }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header id="header" class="header-sticky fixed top-0 left-0 right-0 z-50 text-white transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index9.html#home" class="text-3xl font-serif text-gold font-bold" data-lang="logo">Schein &amp; Asoc. Abogados</a>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="hidden lg:flex items-center space-x-8">
+                <ul class="flex space-x-6 font-medium text-sm tracking-wide">
+                    <li><a href="index9.html#home" class="hover:text-gold transition-colors" data-lang="nav_home">Home</a></li>
+                    <li><a href="index9.html#about" class="hover:text-gold transition-colors" data-lang="nav_about">About</a></li>
+                    <li><a href="index9.html#services" class="hover:text-gold transition-colors" data-lang="nav_services">Services</a></li>
+                    <li><a href="#articles" class="hover:text-gold transition-colors" data-lang="nav_articles">Articles</a></li>
+                    <li><a href="index9.html#contact" class="hover:text-gold transition-colors" data-lang="nav_contact">Contact</a></li>
+                </ul>
+                <div class="lang-toggle flex items-center space-x-2 border-l border-gray-600 pl-6">
+                    <button class="lang-btn text-sm font-semibold" data-lang-set="en">EN</button>
+                    <span class="text-gray-400">|</span>
+                    <button class="lang-btn text-sm font-semibold" data-lang-set="es">ES</button>
+                    <span class="text-gray-400">|</span>
+                    <button class="lang-btn text-sm font-semibold" data-lang-set="ru">RU</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white text-navy shadow-xl absolute top-full left-0 right-0">
+             <a href="index9.html#home" class="block px-6 py-3 font-medium hover:bg-light-gray" data-lang="nav_home">Home</a>
+             <a href="index9.html#about" class="block px-6 py-3 font-medium hover:bg-light-gray" data-lang="nav_about">About</a>
+             <a href="index9.html#services" class="block px-6 py-3 font-medium hover:bg-light-gray" data-lang="nav_services">Services</a>
+             <a href="#articles" class="block px-6 py-3 font-medium hover:bg-light-gray" data-lang="nav_articles">Articles</a>
+             <a href="index9.html#contact" class="block px-6 py-3 font-medium hover:bg-light-gray" data-lang="nav_contact">Contact</a>
+             <div class="flex justify-center py-3 space-x-4 border-t border-gray-200">
+                <button class="lang-btn text-sm font-semibold" data-lang-set="en">EN</button>
+                <button class="lang-btn text-sm font-semibold" data-lang-set="es">ES</button>
+                <button class="lang-btn text-sm font-semibold" data-lang-set="ru">RU</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="relative h-[70vh] min-h-[520px] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('BA_Skyline.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="relative z-10 p-6 max-w-3xl">
+                <p class="uppercase tracking-[0.3em] text-gold text-sm mb-3" data-lang="hero_kicker">Articles &amp; Insights</p>
+                <h1 class="text-5xl md:text-6xl font-serif font-bold mb-4" data-lang="hero_title">Immigration Guidance for Russian Families</h1>
+                <p class="text-lg md:text-xl font-light mb-6" data-lang="hero_subtitle">Long-form perspectives from Dr. Adriel Schein and the Schein Abogados team, covering citizenship strategy, legal updates, and practical checklists.</p>
+                <a href="#articles" class="btn-gold" data-lang="hero_cta">Browse Articles</a>
+            </div>
+        </section>
+
+        <!-- Featured cards -->
+        <section id="articles" class="py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-4xl md:text-5xl font-serif text-navy mb-3" data-lang="featured_title">Featured Insights</h2>
+                    <p class="text-lg text-gray-600" data-lang="featured_subtitle">Bookmark this page and update it offline whenever you add new articles. Each card jumps to the full post below.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-2xl">
+                        <img src="og-image.jpg" alt="2025 Argentine Citizenship Guide for Russians" class="w-full h-48 object-cover" onerror="this.src='BA_Skyline.jpg'; this.onerror=null;">
+                        <div class="p-6">
+                            <p class="text-sm text-gold mb-2" data-lang="card1_author">By Dr. Adriel Schein</p>
+                            <h3 class="text-xl font-serif text-navy mb-3" data-lang="card1_title">2025 Argentine Citizenship Guide for Russians</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-lang="card1_excerpt">Step-by-step residency path, key paperwork, and timelines to reach your Argentine passport.</p>
+                            <a href="#citizenship-guide" class="text-gold font-bold hover:underline" data-lang="read_article">Read Article <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-2xl">
+                        <img src="BA_Skyline.jpg" alt="Why Argentina Welcomes Russian Expats" class="w-full h-48 object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
+                        <div class="p-6">
+                            <p class="text-sm text-gold mb-2" data-lang="card2_author">By Schein Abogados Team</p>
+                            <h3 class="text-xl font-serif text-navy mb-3" data-lang="card2_title">Why Argentina Welcomes Russian Expats</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-lang="card2_excerpt">Cultural and legal signals that make Argentina a receptive home for Russian nationals.</p>
+                            <a href="#welcomes-expats" class="text-gold font-bold hover:underline" data-lang="read_article">Read Article <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-2xl">
+                        <img src="flagpassport.png" alt="Avoid These 5 Common Visa Mistakes" class="w-full h-48 object-cover" onerror="this.src='og-image.jpg'; this.onerror=null;">
+                        <div class="p-6">
+                            <p class="text-sm text-gold mb-2" data-lang="card3_author">By Dr. Adriel Schein</p>
+                            <h3 class="text-xl font-serif text-navy mb-3" data-lang="card3_title">Avoid These 5 Common Visa Mistakes</h3>
+                            <p class="text-gray-600 text-sm mb-4" data-lang="card3_excerpt">From apostille errors to missed renewals, here’s what stalls most Russian applicants.</p>
+                            <a href="#visa-mistakes" class="text-gold font-bold hover:underline" data-lang="read_article">Read Article <i class="fas fa-arrow-right text-sm ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Article content -->
+        <section class="pb-20 md:pb-28 bg-light-gray">
+            <div class="container mx-auto px-6 space-y-12 max-w-5xl">
+                <article id="citizenship-guide" class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+                    <div class="h-56 bg-cover bg-center" style="background-image: url('og-image.jpg');"></div>
+                    <div class="p-8 md:p-10 space-y-4">
+                        <div class="flex flex-wrap items-center text-sm text-gray-500 space-x-3">
+                            <span class="text-gold font-semibold" data-lang="article1_byline">By Dr. Adriel Schein</span>
+                            <span>•</span>
+                            <span data-lang="article1_updated">Updated 2025</span>
+                            <span>•</span>
+                            <span data-lang="article1_time">8 min read</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-serif text-navy" data-lang="article1_title">2025 Argentine Citizenship Guide for Russians</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed" data-lang="article1_intro">A complete overview of the 2-year residency route to Argentine citizenship for Russian nationals, including the documents you need, how to structure your entry, and the court filing that closes the journey.</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li data-lang="article1_b1">Residency milestones: entry visa, temporary residency renewal, and DNI issuance.</li>
+                            <li data-lang="article1_b2">Evidence checklist: apostilled birth/marriage certificates, proof of address, and stable income documentation.</li>
+                            <li data-lang="article1_b3">Court phase: how the Carta de Ciudadanía petition works, timelines, and common objections to avoid.</li>
+                        </ul>
+                        <p class="text-gray-700 leading-relaxed" data-lang="article1_edit">Edit this section offline to add your own procedural notes, links to PDF checklists, or updated jurisprudence. When ready, upload the refreshed <code>articles.html</code> without changing <code>index9.html</code>.</p>
+                        <div class="pt-4">
+                            <a href="#articles" class="text-gold font-bold hover:underline" data-lang="back_to_top">Back to top</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="welcomes-expats" class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+                    <div class="h-56 bg-cover bg-center" style="background-image: url('BA_Skyline.jpg');"></div>
+                    <div class="p-8 md:p-10 space-y-4">
+                        <div class="flex flex-wrap items-center text-sm text-gray-500 space-x-3">
+                            <span class="text-gold font-semibold" data-lang="article2_byline">By Schein Abogados Team</span>
+                            <span>•</span>
+                            <span data-lang="article2_time">6 min read</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-serif text-navy" data-lang="article2_title">Why Argentina Welcomes Russian Expats</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed" data-lang="article2_intro">Explore the cultural affinity, legal framework, and practical benefits that make Argentina a natural destination for Russian families seeking a second home.</p>
+                        <p class="text-gray-700 leading-relaxed" data-lang="article2_body">Touch on bilateral investment opportunities, bilingual education options in Buenos Aires, and how local courts view family unity in residency matters. Replace these paragraphs with your own analysis or recent policy changes.</p>
+                        <div class="pt-4">
+                            <a href="#articles" class="text-gold font-bold hover:underline" data-lang="back_to_top">Back to top</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="visa-mistakes" class="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+                    <div class="h-56 bg-cover bg-center" style="background-image: url('flagpassport.png');"></div>
+                    <div class="p-8 md:p-10 space-y-4">
+                        <div class="flex flex-wrap items-center text-sm text-gray-500 space-x-3">
+                            <span class="text-gold font-semibold" data-lang="article3_byline">By Dr. Adriel Schein</span>
+                            <span>•</span>
+                            <span data-lang="article3_time">5 min read</span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-serif text-navy" data-lang="article3_title">Avoid These 5 Common Visa Mistakes</h2>
+                        <ol class="list-decimal list-inside text-gray-700 space-y-2">
+                            <li data-lang="article3_b1">Submitting documents without Hague apostille or certified translations.</li>
+                            <li data-lang="article3_b2">Letting temporary visas lapse before filing renewals.</li>
+                            <li data-lang="article3_b3">Incorrectly documenting proof of funds or local domicile.</li>
+                            <li data-lang="article3_b4">Assuming family members can apply without synchronized timelines.</li>
+                            <li data-lang="article3_b5">Skipping legal review of contracts that support your residency proof.</li>
+                        </ol>
+                        <p class="text-gray-700 leading-relaxed" data-lang="article3_body">Use this template to spell out red flags you see most often. Updating the list here automatically updates what visitors see after clicking “Read More” on the main site.</p>
+                        <div class="pt-4">
+                            <a href="#articles" class="text-gold font-bold hover:underline" data-lang="back_to_top">Back to top</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-bg text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <a href="index9.html#home" class="text-3xl font-serif text-gold font-bold mb-4 inline-block" data-lang="logo">Schein &amp; Asoc. Abogados</a>
+                    <p class="text-gray-300 text-sm mb-4" data-lang="footer_address">Av. Corrientes 1234, Piso 8<br>CABA, Argentina</p>
+                    <div class="flex space-x-4 text-gold text-2xl">
+                        <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn Profile"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Telegram Profile"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase tracking-wider" data-lang="footer_links">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="index9.html#about" class="hover:text-gold" data-lang="nav_about">About Dr. Schein</a></li>
+                        <li><a href="index9.html#services" class="hover:text-gold" data-lang="nav_services">Services</a></li>
+                        <li><a href="index9.html#services" class="hover:text-gold" data-lang="faq">FAQ</a></li>
+                        <li><a href="index9.html#contact" class="hover:text-gold" data-lang="book_consult">Book Consultation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase tracking-wider" data-lang="services">Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="index9.html#services" class="hover:text-gold" data-lang="service_op_1">Citizenship by Residency</a></li>
+                        <li><a href="index9.html#services" class="hover:text-gold" data-lang="service_op_2">Visa Applications</a></li>
+                        <li><a href="index9.html#services" class="hover:text-gold" data-lang="service_op_3">Document Legalization</a></li>
+                        <li><a href="index9.html#services" class="hover:text-gold" data-lang="service_op_4">Real Estate &amp; Family</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-4 uppercase tracking-wider" data-lang="footer_newsletter_title">Immigration Updates</h4>
+                    <p class="text-sm text-gray-300 mb-4" data-lang="footer_newsletter_desc">Get updates for Russians in Argentina.</p>
+                    <form id="footer-newsletter-form" method="POST" action="https://formspree.io/f/mqagyndo" class="flex">
+                        <input type="email" name="email" placeholder="Email" class="p-2 rounded-l-lg border-0 text-gray-800 focus:outline-none w-full" data-lang-placeholder="email_placeholder_short" required>
+                        <button type="submit" class="bg-gold text-navy px-4 rounded-r-lg font-bold text-lg hover:bg-gold-dark" aria-label="Subscribe to newsletter">&rarr;</button>
+                    </form>
+                    <p id="footer-form-status" class="text-sm mt-2"></p>
+                </div>
+            </div>
+
+            <hr class="mt-12 mb-8 border-t border-gray-700">
+
+            <div class="space-y-3 text-sm text-gray-300">
+                <p data-lang="footer_license">Dr. Adriel David SCHEIN — Matrícula T°116 F°647 C.P.A.C.F. | Matrícula Pcia. de Bs. As. TXIV F°472 C.A.M.</p>
+                <p data-lang="legal_notice">Legal Notice: Informational only; not legal advice or an attorney-client relationship. Consult directly for your specific matter.</p>
+                <p data-lang="legal_repro">Total or partial reproduction is prohibited without express authorization.</p>
+            </div>
+
+            <div class="text-center text-sm text-gray-400 mt-6">
+                <p data-lang="footer_copyright">2025 SCHEIN &amp; ASOC. Todos los derechos reservados.</p>
+                <p class="mt-1">
+                    <a href="#" class="hover:text-gold" data-lang="footer_privacy">Privacy Policy</a>
+                    <span class="mx-2">|</span>
+                    <a href="#" class="hover:text-gold" data-lang="footer_terms">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-navy text-white p-6 shadow-2xl z-50 transform translate-y-full transition-transform duration-500 ease-out">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-300 mb-4 md:mb-0" data-lang="cookie_text">We use cookies to ensure you get the best experience on our website.</p>
+            <button id="cookie-accept" class="btn-gold" data-lang="cookie_accept">Accept &amp; Close</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const content = {
+                en: {
+                    logo: "Schein & Asoc. Abogados",
+                    nav_home: "Home",
+                    nav_about: "About Dr. Schein",
+                    nav_services: "Services",
+                    nav_articles: "Articles",
+                    nav_contact: "Contact",
+                    hero_kicker: "Articles & Insights",
+                    hero_title: "Immigration Guidance for Russian Families",
+                    hero_subtitle: "Long-form perspectives from Dr. Adriel Schein and the Schein Abogados team, covering citizenship strategy, legal updates, and practical checklists.",
+                    hero_cta: "Browse Articles",
+                    featured_title: "Featured Insights",
+                    featured_subtitle: "Bookmark this page and update it offline whenever you add new articles. Each card jumps to the full post below.",
+                    card1_author: "By Dr. Adriel Schein",
+                    card1_title: "2025 Argentine Citizenship Guide for Russians",
+                    card1_excerpt: "Step-by-step residency path, key paperwork, and timelines to reach your Argentine passport.",
+                    read_article: "Read Article",
+                    card2_author: "By Schein Abogados Team",
+                    card2_title: "Why Argentina Welcomes Russian Expats",
+                    card2_excerpt: "Cultural and legal signals that make Argentina a receptive home for Russian nationals.",
+                    card3_author: "By Dr. Adriel Schein",
+                    card3_title: "Avoid These 5 Common Visa Mistakes",
+                    card3_excerpt: "From apostille errors to missed renewals, here’s what stalls most Russian applicants.",
+                    article1_byline: "By Dr. Adriel Schein",
+                    article1_updated: "Updated 2025",
+                    article1_time: "8 min read",
+                    article1_title: "2025 Argentine Citizenship Guide for Russians",
+                    article1_intro: "A complete overview of the 2-year residency route to Argentine citizenship for Russian nationals, including the documents you need, how to structure your entry, and the court filing that closes the journey.",
+                    article1_b1: "Residency milestones: entry visa, temporary residency renewal, and DNI issuance.",
+                    article1_b2: "Evidence checklist: apostilled birth/marriage certificates, proof of address, and stable income documentation.",
+                    article1_b3: "Court phase: how the Carta de Ciudadanía petition works, timelines, and common objections to avoid.",
+                    article1_edit: "Edit this section offline to add your own procedural notes, links to PDF checklists, or updated jurisprudence. When ready, upload the refreshed articles.html without changing index9.html.",
+                    back_to_top: "Back to top",
+                    article2_byline: "By Schein Abogados Team",
+                    article2_time: "6 min read",
+                    article2_title: "Why Argentina Welcomes Russian Expats",
+                    article2_intro: "Explore the cultural affinity, legal framework, and practical benefits that make Argentina a natural destination for Russian families seeking a second home.",
+                    article2_body: "Touch on bilateral investment opportunities, bilingual education options in Buenos Aires, and how local courts view family unity in residency matters. Replace these paragraphs with your own analysis or recent policy changes.",
+                    article3_byline: "By Dr. Adriel Schein",
+                    article3_time: "5 min read",
+                    article3_title: "Avoid These 5 Common Visa Mistakes",
+                    article3_b1: "Submitting documents without Hague apostille or certified translations.",
+                    article3_b2: "Letting temporary visas lapse before filing renewals.",
+                    article3_b3: "Incorrectly documenting proof of funds or local domicile.",
+                    article3_b4: "Assuming family members can apply without synchronized timelines.",
+                    article3_b5: "Skipping legal review of contracts that support your residency proof.",
+                    article3_body: "Use this template to spell out red flags you see most often. Updating the list here automatically updates what visitors see after clicking “Read More” on the main site.",
+                    footer_address: "Av. Corrientes 1234, Piso 8<br>CABA, Argentina",
+                    footer_links: "Quick Links",
+                    faq: "FAQ",
+                    book_consult: "Book Consultation",
+                    services: "Services",
+                    service_op_1: "Citizenship by Residency",
+                    service_op_2: "Visa Applications",
+                    service_op_3: "Document Legalization",
+                    service_op_4: "Real Estate & Family",
+                    footer_newsletter_title: "Immigration Updates",
+                    footer_newsletter_desc: "Get updates for Russians in Argentina.",
+                    footer_license: "Dr. Adriel David SCHEIN — Matrícula T°116 F°647 C.P.A.C.F. | Matrícula Pcia. de Bs. As. TXIV F°472 C.A.M.",
+                    legal_notice: "Legal Notice: Informational only; not legal advice or an attorney-client relationship. Consult directly for your specific matter.",
+                    legal_repro: "Total or partial reproduction is prohibited without express authorization.",
+                    footer_copyright: "2025 SCHEIN & ASOC. Todos los derechos reservados.",
+                    footer_privacy: "Privacy Policy",
+                    footer_terms: "Terms of Service",
+                    cookie_text: "We use cookies to ensure you get the best experience on our website.",
+                    cookie_accept: "Accept & Close",
+                    email_placeholder_short: "Email"
+                },
+                es: {
+                    logo: "Schein & Asoc. Abogados",
+                    nav_home: "Inicio",
+                    nav_about: "Sobre el Dr. Schein",
+                    nav_services: "Servicios",
+                    nav_articles: "Artículos",
+                    nav_contact: "Contacto",
+                    hero_kicker: "Artículos & Análisis",
+                    hero_title: "Guía migratoria para familias rusas",
+                    hero_subtitle: "Artículos largos del Dr. Adriel Schein y su equipo sobre estrategia de ciudadanía, novedades legales y checklists prácticos.",
+                    hero_cta: "Ver artículos",
+                    featured_title: "Insights destacados",
+                    featured_subtitle: "NOTAS DE DESARROLLO: Guardá esta página y actualizala offline cuando sumes nuevas notas. Cada tarjeta salta al artículo completo.",
+                    card1_author: "Por el Dr. Adriel Schein",
+                    card1_title: "Guía 2025 de ciudadanía argentina para rusos",
+                    card1_excerpt: "Ruta de residencia paso a paso, documentos clave y plazos para lograr tu pasaporte argentino.",
+                    read_article: "Leer artículo",
+                    card2_author: "Por el equipo Schein Abogados",
+                    card2_title: "Por qué Argentina recibe a los expats rusos",
+                    card2_excerpt: "Señales culturales y legales que hacen de Argentina un hogar receptivo para ciudadanos rusos.",
+                    card3_author: "Por el Dr. Adriel Schein",
+                    card3_title: "Evitá estos 5 errores comunes de visa",
+                    card3_excerpt: "Desde apostillas hasta renovaciones, los tropiezos que frenan a la mayoría de los solicitantes.",
+                    article1_byline: "Por el Dr. Adriel Schein",
+                    article1_updated: "Actualizado 2025",
+                    article1_time: "8 min de lectura",
+                    article1_title: "Guía 2025 de ciudadanía argentina para rusos",
+                    article1_intro: "Panorama completo del camino de 2 años hacia la ciudadanía argentina para nacionales rusos, con los documentos requeridos, cómo organizar la entrada y la presentación judicial que cierra el proceso.",
+                    article1_b1: "Hitos de residencia: visa de entrada, renovación de residencia temporaria y emisión de DNI.",
+                    article1_b2: "Checklist probatoria: partidas apostilladas, prueba de domicilio e ingresos estables.",
+                    article1_b3: "Etapa judicial: cómo funciona la Carta de Ciudadanía, plazos y objeciones frecuentes a evitar.",
+                    article1_edit: "NOTA_1: Editá esta sección offline para sumar notas de procedimiento, links a PDFs o jurisprudencia actualizada. Luego subí el nuevo articles.html sin tocar index9.html.",
+                    back_to_top: "Volver arriba",
+                    article2_byline: "Por el equipo Schein Abogados",
+                    article2_time: "6 min de lectura",
+                    article2_title: "Por qué Argentina recibe a los expats rusos",
+                    article2_intro: "Explorá la afinidad cultural, el marco legal y los beneficios prácticos que hacen de Argentina un destino natural para familias rusas.",
+                    article2_body: "NOTA_2: Mencioná oportunidades de inversión bilateral, educación bilingüe en Buenos Aires y cómo los tribunales priorizan la unidad familiar en temas de residencia. Reemplazá estos párrafos con tu análisis o cambios recientes.",
+                    article3_byline: "Por el Dr. Adriel Schein",
+                    article3_time: "5 min de lectura",
+                    article3_title: "Evitá estos 5 errores comunes de visa",
+                    article3_b1: "Presentar documentos sin apostilla de La Haya o sin traducciones certificadas.",
+                    article3_b2: "Dejar vencer visas temporarias antes de pedir la renovación.",
+                    article3_b3: "Documentar mal la solvencia o el domicilio local.",
+                    article3_b4: "Asumir que la familia puede aplicar sin sincronizar los plazos.",
+                    article3_b5: "Saltar la revisión legal de contratos que respaldan la residencia.",
+                    article3_body: "NOTA_3: Al actualizar esta parte, también cambia lo que se ve al hacer clic en “Leer más” en el sitio principal.",
+                    footer_address: "Av. Corrientes 1234, Piso 8<br>CABA, Argentina",
+                    footer_links: "Enlaces rápidos",
+                    faq: "FAQ",
+                    book_consult: "Agendar consulta",
+                    services: "Servicios",
+                    service_op_1: "Ciudadanía por residencia",
+                    service_op_2: "Solicitudes de visa",
+                    service_op_3: "Legalización de documentos",
+                    service_op_4: "Bienes raíces y familia",
+                    footer_newsletter_title: "Novedades migratorias",
+                    footer_newsletter_desc: "Recibí actualizaciones para rusos en Argentina.",
+                    footer_license: "Dr. Adriel David SCHEIN — Matrícula T°116 F°647 C.P.A.C.F. | Matrícula Pcia. de Bs. As. TXIV F°472 C.A.M.",
+                    legal_notice: "Aviso legal: contenido informativo, no constituye asesoramiento jurídico ni relación abogado-cliente. Consulte personalmente para su caso.",
+                    legal_repro: "Prohibida la reproducción total o parcial sin autorización expresa.",
+                    footer_copyright: "2025 SCHEIN & ASOC. Todos los derechos reservados.",
+                    footer_privacy: "Política de privacidad",
+                    footer_terms: "Términos del servicio",
+                    cookie_text: "Usamos cookies para asegurar la mejor experiencia en nuestro sitio.",
+                    cookie_accept: "Aceptar y cerrar",
+                    email_placeholder_short: "Email"
+                },
+                ru: {
+                    logo: "Schein & Asoc. Abogados",
+                    nav_home: "Главная",
+                    nav_about: "О д-ре Шейне",
+                    nav_services: "Услуги",
+                    nav_articles: "Статьи",
+                    nav_contact: "Контакты",
+                    hero_kicker: "Статьи и аналитика",
+                    hero_title: "Миграционные советы для российских семей",
+                    hero_subtitle: "Подробные материалы от д-ра Адриэля Шейна и команды о стратегии гражданства, правовых обновлениях и практических чек-листах.",
+                    hero_cta: "Смотреть статьи",
+                    featured_title: "Избранные материалы",
+                    featured_subtitle: "Сохраните страницу и обновляйте офлайн, когда добавляете новые статьи. Каждая карточка ведет к полному тексту ниже.",
+                    card1_author: "Автор: д-р Адриэль Шейн",
+                    card1_title: "Гид 2025 по гражданству Аргентины для россиян",
+                    card1_excerpt: "Пошаговый путь резиденции, ключевые документы и сроки для получения аргентинского паспорта.",
+                    read_article: "Читать статью",
+                    card2_author: "От команды Schein Abogados",
+                    card2_title: "Почему Аргентина приветствует российских экспатов",
+                    card2_excerpt: "Культурные и правовые факторы, делающие Аргентину гостеприимной для граждан РФ.",
+                    card3_author: "Автор: д-р Адриэль Шейн",
+                    card3_title: "5 распространенных ошибок при визах",
+                    card3_excerpt: "От апостилей до продлений: типичные сбои, которые тормозят заявки.",
+                    article1_byline: "Автор: д-р Адриэль Шейн",
+                    article1_updated: "Обновлено 2025",
+                    article1_time: "8 мин чтения",
+                    article1_title: "Гид 2025 по гражданству Аргентины для россиян",
+                    article1_intro: "Полный обзор двухлетнего пути к гражданству, включая необходимые документы, структуру въезда и судебную подачу, которая завершает процесс.",
+                    article1_b1: "Этапы резиденции: виза на въезд, продление временной резиденции и получение DNI.",
+                    article1_b2: "Список доказательств: апостилированные свидетельства, подтверждение адреса и стабильного дохода.",
+                    article1_b3: "Судебная стадия: как работает Carta de Ciudadanía, сроки и типичные возражения, которых стоит избегать.",
+                    article1_edit: "Редактируйте офлайн: добавляйте свои заметки, ссылки на PDF и новую практику. Затем загрузите обновленный articles.html, не меняя index9.html.",
+                    back_to_top: "Вернуться наверх",
+                    article2_byline: "От команды Schein Abogados",
+                    article2_time: "6 мин чтения",
+                    article2_title: "Почему Аргентина приветствует российских экспатов",
+                    article2_intro: "Изучите культурную близость, правовую базу и практические преимущества для российских семей.",
+                    article2_body: "Отметьте возможности двусторонних инвестиций, билингвальные школы в Буэнос-Айресе и подход судов к семейному единству. Замените текст своим анализом или свежими изменениями политики.",
+                    article3_byline: "Автор: д-р Адриэль Шейн",
+                    article3_time: "5 мин чтения",
+                    article3_title: "5 распространенных ошибок при визах",
+                    article3_b1: "Подача документов без апостиля или без заверенных переводов.",
+                    article3_b2: "Просрочка временных виз перед подачей на продление.",
+                    article3_b3: "Неверное подтверждение средств или местного адреса.",
+                    article3_b4: "Предположение, что семья может подаваться без синхронизации сроков.",
+                    article3_b5: "Пропуск юридической проверки договоров, подтверждающих проживание.",
+                    article3_body: "Используйте шаблон, чтобы перечислить самые частые риски. Обновление здесь меняет то, что видит посетитель после клика «Читать далее» на главной.",
+                    footer_address: "Av. Corrientes 1234, Piso 8<br>CABA, Argentina",
+                    footer_links: "Быстрые ссылки",
+                    faq: "FAQ",
+                    book_consult: "Записаться на консультацию",
+                    services: "Услуги",
+                    service_op_1: "Гражданство по резиденции",
+                    service_op_2: "Визовые заявки",
+                    service_op_3: "Легализация документов",
+                    service_op_4: "Недвижимость и семья",
+                    footer_newsletter_title: "Новости иммиграции",
+                    footer_newsletter_desc: "Получайте обновления для россиян в Аргентине.",
+                    footer_license: "Д-р Адриэль Давид Шейн — Matrícula T°116 F°647 C.P.A.C.F. | Matrícula Pcia. de Bs. As. TXIV F°472 C.A.M.",
+                    legal_notice: "Правовое уведомление: информация, а не консультация или отношения адвокат-клиент. Для вашего дела обращайтесь лично.",
+                    legal_repro: "Полное или частичное воспроизведение запрещено без разрешения.",
+                    footer_copyright: "2025 SCHEIN & ASOC. Todos los derechos reservados.",
+                    footer_privacy: "Политика конфиденциальности",
+                    footer_terms: "Условия обслуживания",
+                    cookie_text: "Мы используем cookies, чтобы обеспечить лучший опыт на сайте.",
+                    cookie_accept: "Принять и закрыть",
+                    email_placeholder_short: "Email"
+                }
+            };
+
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled', 'text-navy');
+                    header.classList.remove('text-white');
+                } else {
+                    header.classList.remove('header-scrolled', 'text-navy');
+                    header.classList.add('text-white');
+                }
+            });
+
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+            });
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            const langButtons = document.querySelectorAll('.lang-btn[data-lang-set]');
+            let currentLang = 'en';
+
+            function setLanguage(lang) {
+                if (!content[lang]) return;
+                currentLang = lang;
+                document.documentElement.lang = lang;
+
+                document.querySelectorAll('[data-lang]').forEach(el => {
+                    const key = el.getAttribute('data-lang');
+                    if (content[lang][key]) {
+                        el.innerHTML = content[lang][key];
+                    }
+                });
+
+                document.querySelectorAll('[data-lang-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-lang-placeholder');
+                    if (content[lang][key]) {
+                        el.placeholder = content[lang][key];
+                    }
+                });
+
+                langButtons.forEach(btn => {
+                    if (btn.getAttribute('data-lang-set') === lang) {
+                        btn.classList.add('active');
+                    } else {
+                        btn.classList.remove('active');
+                    }
+                });
+            }
+
+            langButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.getAttribute('data-lang-set');
+                    setLanguage(lang);
+                    localStorage.setItem('schein_abogados_lang', lang);
+                });
+            });
+
+            const savedLang = localStorage.getItem('schein_abogados_lang');
+            const browserLang = navigator.language.split('-')[0];
+            if (savedLang) {
+                setLanguage(savedLang);
+            } else if (browserLang === 'ru') {
+                setLanguage('ru');
+            } else if (browserLang === 'es') {
+                setLanguage('es');
+            } else {
+                setLanguage('en');
+            }
+
+            const cookieBanner = document.getElementById('cookie-banner');
+            const cookieAccept = document.getElementById('cookie-accept');
+            if (!localStorage.getItem('schein_abogados_cookie_accept')) {
+                setTimeout(() => {
+                    cookieBanner.style.transform = 'translateY(0)';
+                }, 1500);
+            } else {
+                cookieBanner.style.display = 'none';
+            }
+            cookieAccept.addEventListener('click', () => {
+                cookieBanner.style.transform = 'translateY(100%)';
+                localStorage.setItem('schein_abogados_cookie_accept', 'true');
+            });
+
+            function handleSimpleForm(formId, statusId) {
+                const form = document.getElementById(formId);
+                const status = document.getElementById(statusId);
+                if (!form || !status) return;
+
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const data = new FormData(form);
+                    const submitButton = form.querySelector('button[type=\"submit\"]');
+                    const originalHTML = submitButton.innerHTML;
+
+                    submitButton.innerHTML = '...';
+                    submitButton.disabled = true;
+
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: data,
+                        headers: { 'Accept': 'application/json' }
+                    }).then(response => {
+                        if (response.ok) {
+                            form.reset();
+                            status.innerHTML = 'Success! Check your email.';
+                            status.className = 'text-sm mt-2 text-green-300';
+                        } else {
+                            status.innerHTML = 'Error. Please try again.';
+                            status.className = 'text-sm mt-2 text-red-300';
+                        }
+                    }).catch(() => {
+                        status.innerHTML = 'Error. Please try again.';
+                        status.className = 'text-sm mt-2 text-red-300';
+                    }).finally(() => {
+                        submitButton.innerHTML = originalHTML;
+                        submitButton.disabled = false;
+                        setTimeout(() => { status.innerHTML = ''; }, 3000);
+                    });
+                });
+            }
+
+            handleSimpleForm('footer-newsletter-form', 'footer-form-status');
+        });
+    </script>
+</body>
+</html>
